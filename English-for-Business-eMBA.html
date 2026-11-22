@@ -1,0 +1,1807 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English for Business eMBA</title>
+<style>
+:root{--bg:#f6f4ef;--panel:#fff;--ink:#1d2330;--muted:#6b7280;--line:#e5e1d8;--accent:#1f5f8b;--accent2:#e8f1f8;--good:#1e7a46;--goodbg:#e7f5ec;--bad:#b3261e;--badbg:#fbeaea;--warn:#8a5a00;--warnbg:#fff5dc;--shadow:0 1px 2px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.04)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171c;--panel:#1d2128;--ink:#e8e9ec;--muted:#9aa1ad;--line:#2d333d;--accent:#6fb3e0;--accent2:#1c2a37;--good:#5fcf8f;--goodbg:#173226;--bad:#ff8a80;--badbg:#3a1e1e;--warn:#f0c060;--warnbg:#33290f;--shadow:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171c;--panel:#1d2128;--ink:#e8e9ec;--muted:#9aa1ad;--line:#2d333d;--accent:#6fb3e0;--accent2:#1c2a37;--good:#5fcf8f;--goodbg:#173226;--bad:#ff8a80;--badbg:#3a1e1e;--warn:#f0c060;--warnbg:#33290f;--shadow:none;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--accent)}
+.layout{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+#side{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:var(--panel);padding:18px 12px}
+.brand{font-weight:700;font-size:17px;padding:0 8px 4px}.brand small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+#nav a{display:block;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14.5px}
+#nav a:hover{background:var(--accent2)}#nav a.active{background:var(--accent);color:#fff}
+.navh{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:14px 10px 4px}
+.navfoot{margin-top:18px;padding:0 10px}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:13px;padding:0}
+#topbar{display:none}
+main{padding:28px 36px 60px;max-width:1000px;width:100%;min-width:0;overflow-wrap:anywhere}
+h1{font-size:28px;line-height:1.25;margin:0 0 10px}h1 .vn{font-weight:400;color:var(--muted);font-size:18px}
+h2.sec{margin:34px 0 12px;font-size:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;box-shadow:var(--shadow)}
+.card h3{margin:0 0 10px;font-size:17.5px}
+.hero{background:linear-gradient(135deg,var(--accent),#2f7a6b);color:#fff;border-radius:18px;padding:28px 30px}
+.hero h1{font-size:34px;color:#fff}.kicker{margin:0;opacity:.85;font-size:14px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}.stats div{background:rgba(255,255,255,.14);border-radius:12px;padding:10px 16px;min-width:140px}.stats b{display:block;font-size:22px}.stats span{font-size:13px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.ucard{display:block;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);transition:transform .12s}
+.ucard:hover{transform:translateY(-2px);border-color:var(--accent)}
+.ucard h3{margin:2px 0 0;font-size:18px}.ucard .vn{margin:0;color:var(--accent);font-size:14px}.ucard .goal{font-size:13.5px;color:var(--muted);margin:8px 0 10px}
+.unum{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0}.bar i{display:block;height:100%;background:var(--good);border-radius:99px;transition:width .3s}
+small,.muted{color:var(--muted);font-size:13.5px}.center{text-align:center}
+.uhead .goal{color:var(--muted);margin:0 0 6px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:18px 0 6px;overflow-x:auto}
+.tabs a{padding:9px 14px;text-decoration:none;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;font-weight:600;font-size:15px}
+.tabs a.on{color:var(--accent);border-color:var(--accent)}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.seg a{padding:4px 12px;border:1px solid var(--line);border-radius:99px;text-decoration:none;color:var(--ink);font-size:14px;background:var(--panel)}.seg a.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.note{background:var(--accent2);border-radius:10px;padding:10px 14px;font-size:14.5px}
+.tip{background:var(--warnbg);color:var(--ink);border-left:4px solid var(--warn);padding:8px 12px;border-radius:6px;font-size:14.5px}
+.warn{background:var(--warnbg);border-left:4px solid var(--warn);padding:8px 12px;border-radius:6px}
+.formula{background:var(--accent2);font-weight:700;text-align:center;padding:10px;border-radius:8px;margin:8px 0}
+table.t{border-collapse:collapse;width:100%;font-size:14.5px;margin:8px 0;display:block;overflow-x:auto}
+table.t th,table.t td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}table.t th{background:var(--accent2)}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.toc a{font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:99px;text-decoration:none;background:var(--panel);color:var(--ink)}
+.ex header{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.badge{font-size:12px;padding:2px 9px;border-radius:99px;background:var(--line);color:var(--ink);white-space:nowrap}.badge.ok{background:var(--goodbg);color:var(--good)}
+.intro{color:var(--muted);margin:0 0 6px;font-size:14.5px}
+ol.items{padding-left:0;list-style:none;margin:8px 0;counter-reset:it}
+.row{padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin:8px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,40%);gap:6px 12px;align-items:center}
+.row.ok{border-color:var(--good);background:var(--goodbg)}.row.no{border-color:var(--bad);background:var(--badbg)}
+.row .fb{grid-column:1/-1;font-size:14px}.row .fb:empty{display:none}
+.row.open{display:block}
+.row:has(.opts){grid-template-columns:1fr}
+.inputs{display:flex;gap:6px;flex-wrap:wrap}
+input[type=text],input[type=search],select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 10px;width:100%;min-width:0;max-width:100%}
+.inputs input{flex:1 1 140px}
+input.good{border-color:var(--good);background:var(--goodbg)}input.bad{border-color:var(--bad)}
+textarea{margin:6px 0;resize:vertical}
+.opts{display:flex;flex-direction:column;gap:5px}
+.opt{display:flex;gap:8px;align-items:flex-start;padding:6px 10px;border:1px solid var(--line);border-radius:8px;cursor:pointer;background:var(--panel)}
+.opt.right{border-color:var(--good);background:var(--goodbg)}.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.okt{color:var(--good);font-weight:600}.not{color:var(--bad)}
+.exp{color:var(--ink);opacity:.9;margin-top:3px}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14.5px}
+.model{background:var(--accent2);border-radius:8px;padding:10px 12px;margin-top:6px;font-size:15px}
+.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.btn{font:inherit;font-size:14.5px;font-weight:600;padding:8px 14px;border-radius:9px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn.ghost{background:transparent}
+.btn.good{border-color:var(--good);color:var(--good)}.btn.bad{border-color:var(--bad);color:var(--bad)}.btn.big{padding:11px 22px;font-size:16px}
+.score{font-weight:700}
+.spk{background:none;border:0;cursor:pointer;font-size:15px;padding:0 3px;vertical-align:middle}
+.pager{display:flex;justify-content:space-between;margin-top:24px}
+.vtools{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.vrow{display:grid;grid-template-columns:1.2fr 1fr 1.6fr auto;gap:10px;padding:8px 4px;border-bottom:1px solid var(--line);font-size:14.5px;align-items:center}
+.vw i{color:var(--muted);font-size:12.5px}.ve{color:var(--muted)}
+.fcwrap{max-width:560px;margin:10px auto}
+.flash{position:relative;height:250px;margin:14px 0;perspective:1000px;cursor:pointer;outline:none}
+.flash .front,.flash .back{position:absolute;inset:0;border-radius:18px;border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;backface-visibility:hidden;transition:transform .45s}
+.flash .back{transform:rotateY(180deg);background:var(--accent2)}
+.flash.flipped .front{transform:rotateY(180deg)}.flash.flipped .back{transform:rotateY(360deg)}
+.fw{font-size:30px;font-weight:700}.fp{color:var(--muted)}.hint{color:var(--muted);font-size:12.5px;margin-top:20px}
+.fv{font-size:24px;font-weight:700;color:var(--accent)}.fe{margin-top:10px;font-style:italic}
+.fcbtns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.quiz .qtop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px}
+.qq{font-size:19px;font-weight:600;margin:12px 0}
+.qopts{display:grid;gap:8px}.qopt{font:inherit;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.qopt:hover:not(:disabled){border-color:var(--accent)}.qopt.right{border-color:var(--good);background:var(--goodbg)}.qopt.wrong{border-color:var(--bad);background:var(--badbg)}
+.qtype{display:flex;gap:8px}.qfb{margin-top:12px}.qfb .btn{margin-top:10px}
+.review li{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;list-style-position:inside}
+.examset{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end}.chk{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.examset select{width:auto}
+.tips ol{margin:0;padding-left:20px}.tips li{margin:6px 0}
+@media (max-width:860px){
+ .layout{grid-template-columns:minmax(0,1fr)}
+ #side{position:fixed;z-index:20;left:0;top:0;width:270px;transform:translateX(-100%);transition:transform .2s;box-shadow:0 0 30px rgba(0,0,0,.3)}
+ body.navopen #side{transform:none}
+ #topbar{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:10;background:var(--panel);border-bottom:1px solid var(--line);padding:10px 16px}
+ #menuBtn{font-size:20px;background:none;border:1px solid var(--line);border-radius:8px;padding:2px 10px;color:var(--ink)}
+ main{padding:18px 16px 50px}
+ .row{grid-template-columns:minmax(0,1fr)}
+ .vrow{grid-template-columns:1fr;gap:2px}
+ h1{font-size:23px}.hero{padding:20px}.hero h1{font-size:27px}
+}
+</style>
+</head>
+<body>
+<div id="topbar"><button id="menuBtn" aria-label="Menu">☰</button><b>English for Business · eMBA</b></div>
+<div class="layout">
+  <aside id="side"><div class="brand">English for Business<small>eMBA · Đại học Thương Mại · 2026</small></div><nav id="nav"></nav></aside>
+  <main id="main"></main>
+</div>
+<script>
+/* Nội dung Unit 1–4. Cấu trúc bài tập:
+   fill  : items[{q, a:[blank1, blank2...], ex}]  — mỗi blank có thể có nhiều đáp án, ngăn bởi "|"
+   match : items[{l, r, ex}]  (+ extra: các lựa chọn gây nhiễu)
+   mcq   : items[{q, o:[...], a: index, ex}]
+   open  : items[{q, model}]  — câu hỏi mở, có bài mẫu
+*/
+window.UNITS = window.UNITS || [];
+
+/* ===================== UNIT 1 ===================== */
+UNITS.push({
+  id: 1, title: "Economic Indicators", vn: "Các chỉ số kinh tế",
+  goal: "Hiểu và gọi đúng tên các chỉ số kinh tế (GDP, lạm phát, lãi suất, tỷ giá, cán cân thương mại…), đọc bảng số liệu và mô tả xu hướng tăng/giảm bằng tiếng Anh.",
+  concepts: [
+    { h: "1. Chỉ số kinh tế (economic indicators) là gì?",
+      body: `<p>Là các <b>con số "đo sức khoẻ" của một nền kinh tế</b>. Giống như bác sĩ đo nhiệt độ, huyết áp, nhà kinh tế nhìn vào các chỉ số để biết nền kinh tế đang khoẻ hay yếu.</p>
+      <table class="t"><tr><th>Chỉ số</th><th>Nghĩa</th><th>Ý nghĩa thực tế</th></tr>
+      <tr><td><b>Population</b></td><td>Dân số</td><td>Quy mô thị trường, lực lượng lao động</td></tr>
+      <tr><td><b>GDP</b> (Gross Domestic Product)</td><td>Tổng sản phẩm <u>trong nước</u></td><td>"Quy mô" nền kinh tế – the total size of an economy</td></tr>
+      <tr><td><b>Growth rate</b></td><td>Tốc độ tăng trưởng</td><td>GDP tăng bao nhiêu % mỗi năm – the rate of expansion</td></tr>
+      <tr><td><b>Inflation</b></td><td>Lạm phát</td><td>Giá cả tăng – the movement of prices</td></tr>
+      <tr><td><b>Interest rate</b></td><td>Lãi suất</td><td>Chi phí đi vay – the cost of borrowing money</td></tr>
+      <tr><td><b>Unemployment rate</b></td><td>Tỷ lệ thất nghiệp</td><td>% người không có việc làm</td></tr>
+      <tr><td><b>Exchange rate</b></td><td>Tỷ giá hối đoái</td><td>Giá trị đồng tiền so với USD…</td></tr>
+      <tr><td><b>Balance of trade</b></td><td>Cán cân thương mại</td><td>Xuất khẩu – Nhập khẩu</td></tr></table>`},
+    { h: "2. Phân biệt các cặp dễ nhầm (hay ra thi!)",
+      body: `<ul>
+      <li><b>GDP vs GNP</b>: GDP = giá trị sản xuất <u>trong lãnh thổ</u> một nước (within a country's borders), bất kể ai làm ra. GNP = giá trị do <u>công dân</u> nước đó làm ra (by its nationals), dù ở đâu. <i>Mẹo: Domestic = trong nước (lãnh thổ), National = người mang quốc tịch.</i></li>
+      <li><b>Surplus vs Deficit</b>: Surplus (thặng dư) = xuất khẩu &gt; nhập khẩu. Deficit (thâm hụt) = xuất khẩu &lt; nhập khẩu. Số âm trong cán cân thương mại (vd. US$ -12.54bn) = <b>deficit</b>.</li>
+      <li><b>Base rate vs Interest rate vs Mortgage rate</b>: Base rate = lãi suất cơ bản do <u>Ngân hàng Trung ương</u> đặt ra. Interest rate = lãi suất nói chung (% khoản vay phải trả mỗi năm). Mortgage rate = lãi suất vay <u>mua nhà</u>.</li>
+      <li><b>RPI / CPI</b>: chỉ số giá bán lẻ / giá tiêu dùng – đo sự thay đổi giá của một "giỏ hàng hoá" (basket of goods) cố định ⇒ dùng để đo lạm phát.</li></ul>`},
+    { h: "3. Bản chất: các chỉ số liên quan với nhau thế nào?",
+      body: `<ul>
+      <li>Lạm phát cao ⇒ Ngân hàng TW <b>tăng lãi suất</b> để "hạ nhiệt" (vay đắt hơn ⇒ người dân chi tiêu ít ⇒ giá giảm bớt).</li>
+      <li>Lãi suất cao ⇒ <b>tốt cho người gửi tiền, xấu cho người đi vay (borrowers)</b> và doanh nghiệp.</li>
+      <li>Tăng trưởng âm (negative growth, vd. -5.8%) ⇒ suy thoái (recession) ⇒ thất nghiệp thường tăng.</li>
+      <li>Thâm hụt thương mại lớn ⇒ nước đó phụ thuộc nhập khẩu, đồng tiền có thể mất giá.</li></ul>
+      <p class="tip">Khi đề hỏi "Which has the better interest rates <b>for borrowers</b>?" ⇒ chọn nước có lãi suất <b>THẤP</b> hơn.</p>`},
+    { h: "4. Ngôn ngữ mô tả xu hướng (describing trends) – TRỌNG TÂM",
+      body: `<table class="t"><tr><th>Tăng ↑</th><th>Giảm ↓</th></tr>
+      <tr><td>rise – rose – risen<br>increase<br>go up – went up<br>grow, climb</td><td>fall – fell – fallen<br>decrease<br>go down – went down<br>drop, decline</td></tr></table>
+      <p><b>Trạng từ chỉ mức độ</b> (đặt SAU động từ):</p>
+      <ul><li>Thay đổi <b>lớn</b>: <b>sharply, steeply, dramatically</b></li>
+      <li>Thay đổi <b>nhỏ</b>: <b>slightly</b></li>
+      <li>Thay đổi <b>liên tục, đều đặn</b>: <b>steadily</b></li></ul>
+      <p><b>Giới từ với số liệu</b>:</p>
+      <ul><li><b>from</b> 4.5% <b>to</b> 5% (từ… đến…)</li><li>go up <b>by</b> 0.5% (tăng <u>thêm</u> 0.5% – lượng thay đổi)</li><li>increase <b>to</b> 3.4% (tăng <u>lên mức</u> 3.4%)</li></ul>
+      <p><b>Chuyển sang danh từ</b>: rise sharply → <i>a sharp rise</i>; fall slightly → <i>a slight fall</i>; increase steadily → <i>a steady increase</i>.</p>
+      <p class="tip">Ví dụ chuẩn: "Inflation <b>rose sharply from</b> 1.8% in January <b>to</b> 3.4% in August." / "There was <b>a slight fall in</b> unemployment."</p>`}
+  ],
+  readings: [
+    { t: "Reading 1 – Interpreting data (Turkey vs Poland)", s: `<p>Bảng so sánh 8 chỉ số của Thổ Nhĩ Kỳ và Ba Lan:</p>
+      <table class="t"><tr><th>Indicator</th><th>Turkey</th><th>Poland</th></tr>
+      <tr><td>a Population</td><td>76.8m</td><td>38.4m</td></tr>
+      <tr><td>b GDP</td><td>US$ 861.6bn</td><td>US$ 686.2bn</td></tr>
+      <tr><td>c Growth rate</td><td>-5.8%</td><td>1.1%</td></tr>
+      <tr><td>d Interest rates</td><td>25%</td><td>5.0%</td></tr>
+      <tr><td>e Unemployment</td><td>14.6%</td><td>11.0%</td></tr>
+      <tr><td>f Inflation</td><td>5.9%</td><td>3.4%</td></tr>
+      <tr><td>g Exchange rate</td><td>US$1 = YTL 1.55</td><td>US$1 = PLN 3.1</td></tr>
+      <tr><td>h Balance of trade</td><td>US$ -12.54bn</td><td>US$ -3.585bn</td></tr></table>
+      <p><b>Đọc hiểu nhanh:</b> Thổ Nhĩ Kỳ <u>lớn hơn</u> (GDP, dân số) nhưng <u>yếu hơn</u> ở hầu hết chỉ số: tăng trưởng âm, lãi suất rất cao (25%), thất nghiệp cao, lạm phát cao hơn, thâm hụt thương mại lớn.</p>`},
+    { t: "Reading 2 – Life in modern Britain (1957 vs 2007)", s: `<p>Khảo sát chi tiêu gia đình Anh (Family Spending Survey):</p>
+      <ul><li><b>1957</b>: thực phẩm + nhiên liệu + tiền thuê nhà ≈ 50% chi tiêu; thêm quần áo, đi lại ≈ 70%. "Xa xỉ" chính: thuốc lá + rượu (~10%); ăn nhà hàng 3%.</li>
+      <li><b>2007</b>: thu nhập tăng gấp đôi (in real terms). Thực phẩm chỉ còn <b>15%</b> (từ 33%), một nửa trong đó là ăn ngoài/đồ mang về. Nhà ở tăng từ 9% lên <b>19%</b>. Giải trí (leisure) <b>7%</b>, quần áo <b>5%</b>. Đi lại tăng mạnh 8% → <b>16%</b> (3/4 gia đình có ô tô). Rượu vẫn 3%; thuốc lá giảm 6% → 1%.</li></ul>
+      <p><b>Bản chất:</b> khi thu nhập tăng, tỷ trọng chi cho nhu yếu phẩm (ăn uống) <u>giảm</u>, chi cho nhà ở, đi lại, giải trí <u>tăng</u> (quy luật Engel).</p>`}
+  ],
+  exercises: [
+    { id: "u1e1", type: "match", title: "Reading 1 – Ex.1: Match indicators a–h with definitions 1–8",
+      intro: "Ghép mỗi định nghĩa với chỉ số đúng.",
+      items: [
+        { l: "1 the movement of prices in the economy", r: "f Inflation", ex: "Movement of prices = sự biến động giá = lạm phát." },
+        { l: "2 the cost of borrowing money from a bank", r: "d Interest rates", ex: "Cost of borrowing = chi phí đi vay = lãi suất." },
+        { l: "3 the relation between imports and exports", r: "h Balance of trade", ex: "Quan hệ nhập khẩu – xuất khẩu = cán cân thương mại." },
+        { l: "4 the value of a country's money compared with other currencies", r: "g Exchange rate", ex: "So sánh giá trị đồng tiền = tỷ giá." },
+        { l: "5 the number of people who live in a country", r: "a Population", ex: "Số người sống trong nước = dân số." },
+        { l: "6 the number of people with no job", r: "e Unemployment rate", ex: "Không có việc = thất nghiệp." },
+        { l: "7 the total size of an economy", r: "b Gross domestic product", ex: "Quy mô tổng thể nền kinh tế = GDP." },
+        { l: "8 the rate of expansion in the economy", r: "c Growth rate", ex: "Expansion = mở rộng ⇒ tốc độ tăng trưởng." }
+      ]},
+    { id: "u1e2", type: "mcq", title: "Reading 1 – Ex.3: What can you learn from the indicators?",
+      intro: "Dùng bảng số liệu Turkey vs Poland (xem phần Bài đọc).",
+      items: [
+        { q: "1 Which country has the bigger economy?", o: ["Turkey", "Poland"], a: 0, ex: "GDP Turkey US$861.6bn > Poland US$686.2bn. 'Bigger economy' = GDP lớn hơn (không phải dân số)." },
+        { q: "2 Which country has the higher growth rate?", o: ["Turkey", "Poland"], a: 1, ex: "Poland +1.1% > Turkey -5.8% (Turkey đang tăng trưởng âm = suy thoái)." },
+        { q: "3 Which has the worse inflation rate?", o: ["Turkey", "Poland"], a: 0, ex: "Lạm phát càng cao càng xấu: Turkey 5.9% > Poland 3.4%." },
+        { q: "4 Which has the better interest rates for borrowers?", o: ["Turkey", "Poland"], a: 1, ex: "Người đi vay thích lãi suất THẤP: Poland 5% < Turkey 25%." },
+        { q: "5 Which is a danger sign for Turkey's economy?", o: ["Negative growth (-5.8%) with very high interest rates (25%) and a large trade deficit", "A trade surplus", "Low unemployment"], a: 0, ex: "Model answer: Turkey has negative growth, very high interest rates, high unemployment (14.6%) and a large trade deficit (US$ -12.54bn). Poland also has fairly high unemployment (11%) and a trade deficit." }
+      ]},
+    { id: "u1e3", type: "info", title: "Listening – Presenting figures (▶ U1)",
+      html: `<p class="warn">Phần này cần file nghe/transcript (bài thuyết trình về kinh tế Anh). Số liệu đã có trong tài liệu: Unemployment 2003 = <b>5.5%</b>; Interest rates 2009 = <b>0.75%</b>; Inflation January = <b>1.8%</b>, August = <b>2.4%</b>.</p>
+      <p><b>Cách làm bài nghe số liệu:</b> (1) đọc trước bảng, đoán loại số (%, năm, tháng); (2) chú ý các động từ xu hướng (rose/fell…) và giới từ <i>from/to/by</i>; (3) phân biệt <i>fifteen</i> /fɪfˈtiːn/ và <i>fifty</i> /ˈfɪfti/ (trọng âm); (4) "point" = dấu thập phân: "two point four per cent" = 2.4%.</p>`},
+    { id: "u1e4", type: "mcq", title: "Describing trends – Ex.1 & 2: Up (↑) or down (↓)?",
+      intro: "Các động từ trong 4 tin (a–d) cho biết chỉ số tăng hay giảm?",
+      items: [
+        { q: "a 'German unemployment rate falls slightly…'", o: ["↑ up", "↓ down"], a: 1, ex: "fall = giảm." },
+        { q: "a 'Exports… rise dramatically…'", o: ["↑ up", "↓ down"], a: 0, ex: "rise = tăng." },
+        { q: "b '…inflation increases sharply to 3.4%'", o: ["↑ up", "↓ down"], a: 0, ex: "increase = tăng." },
+        { q: "b '…mortgage rates go up by 0.5%…'", o: ["↑ up", "↓ down"], a: 0, ex: "go up = tăng." },
+        { q: "c 'Oil prices decrease…'", o: ["↑ up", "↓ down"], a: 1, ex: "decrease = giảm." },
+        { q: "c '…demand from China goes down sharply'", o: ["↑ up", "↓ down"], a: 1, ex: "go down = giảm." },
+        { q: "d 'US house prices continue to fall steadily…'", o: ["↑ up", "↓ down"], a: 1, ex: "fall = giảm." },
+        { q: "d '…the number of new homes constructed drops steeply…'", o: ["↑ up", "↓ down"], a: 1, ex: "drop = giảm." }
+      ]},
+    { id: "u1e5", type: "fill", title: "Describing trends – Ex.2: Complete the table",
+      intro: "Điền các động từ đã gạch chân vào bảng (dạng nguyên thể).",
+      items: [
+        { q: "to increase (↑): r_____", a: ["rise"], ex: "rise – rose – risen" },
+        { q: "to increase (↑): i_____", a: ["increase"] },
+        { q: "to increase (↑): go __", a: ["up"] },
+        { q: "to decrease (↓): f_____", a: ["fall"], ex: "fall – fell – fallen" },
+        { q: "to decrease (↓): d_____ (c)", a: ["decrease"] },
+        { q: "to decrease (↓): go ____", a: ["down"] },
+        { q: "to decrease (↓): d___ (d)", a: ["drop"] }
+      ]},
+    { id: "u1e6", type: "mcq", title: "Describing trends – Ex.3: Which adverbs describe…?",
+      items: [
+        { q: "slightly", o: ["a big change", "a small change", "a continuous change over time"], a: 1, ex: "slightly = nhẹ, một chút." },
+        { q: "steadily", o: ["a big change", "a small change", "a continuous change over time"], a: 2, ex: "steadily = đều đặn, liên tục." },
+        { q: "sharply", o: ["a big change", "a small change", "a continuous change over time"], a: 0, ex: "sharply = mạnh, đột ngột." },
+        { q: "steeply", o: ["a big change", "a small change", "a continuous change over time"], a: 0, ex: "steeply = dốc đứng ⇒ thay đổi lớn." },
+        { q: "dramatically", o: ["a big change", "a small change", "a continuous change over time"], a: 0, ex: "dramatically = ngoạn mục, rất lớn." }
+      ]},
+    { id: "u1e7", type: "fill", title: "Luyện thêm: Viết câu mô tả xu hướng",
+      intro: "Điền 1 từ phù hợp (động từ/trạng từ/giới từ).",
+      items: [
+        { q: "Inflation rose ______ (mạnh) from 1.8% to 3.4%.", a: ["sharply|dramatically|steeply"] },
+        { q: "Mortgage rates went up ______ 0.5% (tăng thêm 0.5%).", a: ["by"], ex: "by = lượng thay đổi." },
+        { q: "Mortgage rates went up from 4.5% ______ 5%.", a: ["to"] },
+        { q: "Unemployment fell ______ (nhẹ) last month.", a: ["slightly"] },
+        { q: "There was a sharp ______ (danh từ: sự tăng) in exports.", a: ["rise|increase"], ex: "a sharp rise / a sharp increase" },
+        { q: "House prices continue to fall ______ (đều đặn).", a: ["steadily"] },
+        { q: "There was a slight ______ (danh từ: sự giảm) in oil prices.", a: ["fall|decrease|drop|decline"] }
+      ]},
+    { id: "u1e8", type: "match", title: "Vocabulary – Economic indicators: Match the terms with explanations",
+      items: [
+        { l: "Base rates", r: "interest rates set by the Central Bank" },
+        { l: "Mortgage rates", r: "the interest rate you pay on a loan for a house or flat" },
+        { l: "Gross domestic product (GDP)", r: "monetary value of all the finished goods and services produced within a country's borders", ex: "within borders = trong lãnh thổ." },
+        { l: "Gross national product (GNP)", r: "value of all finished goods and services produced in a country in one year by its nationals", ex: "by its nationals = bởi công dân nước đó." },
+        { l: "Retail / consumer price index (RPI/CPI)", r: "a measure of changes, over time, in retail prices of a constant basket of goods and services" },
+        { l: "Interest rate", r: "the proportion of a loan that is charged as interest to the borrower, typically an annual percentage" },
+        { l: "Foreign exchange rate (Forex)", r: "the rate at which one currency is exchanged for another" },
+        { l: "Balance of trade", r: "the difference in value between a country's imports and exports" },
+        { l: "Surplus", r: "when exports are larger than imports" },
+        { l: "Deficit", r: "when exports are lower than imports" }
+      ]},
+    { id: "u1e9", type: "fill", title: "Reading 2 – Ex.2: % of UK family spending in 2007",
+      intro: "Đọc kết luận báo cáo 2007, điền % (chỉ ghi số, vd: 15).",
+      items: [
+        { q: "Food: ___%", a: ["15|15%"], ex: "'Basic necessities, including food, now account for only 15%' (1957: 33%)." },
+        { q: "Housing: ___%", a: ["19|19%"], ex: "'more than doubled since 1957 from 9% to 19%'." },
+        { q: "Transport (motoring & travel): ___%", a: ["16|16%"], ex: "'from 8% of spending in 1957 to 16% in 2006'." },
+        { q: "Leisure: ___%", a: ["7|7%"] },
+        { q: "Clothing: ___%", a: ["5|5%"] },
+        { q: "Thứ tự từ lớn nhất (1) đến nhỏ nhất (5): housing = ?", a: ["1"], ex: "Housing 19% > transport 16% > food 15% > leisure 7% > clothing 5%." },
+        { q: "Thứ tự: transport = ?", a: ["2"] },
+        { q: "Thứ tự: food = ?", a: ["3"] },
+        { q: "Thứ tự: leisure = ?", a: ["4"] },
+        { q: "Thứ tự: clothing = ?", a: ["5"] }
+      ]}
+  ],
+  discussion: [
+    { q: "Why do you think spending on food has fallen so sharply?", model: "Because family income has doubled in real terms, so food now takes a much smaller share of the budget. Food has also become cheaper thanks to supermarkets, mass production and imports. As people get richer, they spend more on housing, transport and leisure." },
+    { q: "Why has transport spending increased so dramatically?", model: "Mainly because of rising car ownership – three in four families now own at least one car. People also travel more for work and holidays, and fuel and running costs are high." },
+    { q: "Family income has doubled over fifty years, but does higher income create happiness? What kind of problems could it bring?", model: "Not necessarily. Higher income gives more comfort and choice, but it can also bring stress, longer working hours, debt from consumer spending, higher house prices and environmental problems such as pollution from cars." },
+    { q: "Assignment: Describe the economy of Vietnam using key indicators.", model: "Country: Vietnam. Growth: one of the fastest-growing economies in Asia, around 6–7% a year. Inflation: relatively stable, around 3–4%. Interest rates: moderate, set by the State Bank of Vietnam. Key sectors: manufacturing, electronics, textiles, agriculture, tourism. Main exports: electronics (phones, computers), textiles and garments, footwear, rice, coffee, seafood. Risks: dependence on exports and FDI, infrastructure bottlenecks, climate change. Opportunities: young workforce, FDI shifting from China, growing middle class, digital economy. (Hãy cập nhật số liệu mới nhất trước khi thi.)" }
+  ]
+});
+
+/* ===================== UNIT 2 ===================== */
+UNITS.push({
+  id: 2, title: "Economic sectors", vn: "Các khu vực kinh tế",
+  goal: "Phân biệt 3 khu vực kinh tế (primary – secondary – service), gọi tên các ngành, phân tích điểm mạnh/yếu của một nền kinh tế (UK vs China) và các yếu tố đầu tư nhà máy.",
+  concepts: [
+    { h: "1. Ba khu vực kinh tế – bản chất",
+      body: `<table class="t"><tr><th>Khu vực</th><th>Làm gì?</th><th>Ví dụ ngành</th></tr>
+      <tr><td><b>Primary sector</b> (khu vực I)</td><td><b>provides the raw materials and natural resources</b> – khai thác tài nguyên, nguyên liệu thô</td><td>agriculture, mining, oil exploration, fishing, forestry</td></tr>
+      <tr><td><b>Secondary sector</b> (khu vực II)</td><td><b>manufactures finished products</b> – chế biến, sản xuất</td><td>steel production, car manufacturing, textiles and clothing, food processing</td></tr>
+      <tr><td><b>Service sector</b> (tertiary – khu vực III)</td><td><b>provides support activities for customers or other industries</b> – dịch vụ</td><td>transportation & logistics, advertising, retailing, finance, tourism</td></tr></table>
+      <p class="tip">Mẹo nhớ: Primary = "lấy từ thiên nhiên"; Secondary = "biến thành sản phẩm"; Service = "phục vụ, hỗ trợ". Nền kinh tế phát triển (USA, UK) thì <b>service sector lớn nhất</b> (UK &gt; 70% GDP).</p>`},
+    { h: "2. Các nhóm ngành trong khu vực II",
+      body: `<ul><li><b>Manufacturing industries</b>: sản xuất (vd. car industry)</li>
+      <li><b>Processing industries</b>: chế biến (vd. food processing)</li>
+      <li><b>Heavy industries</b>: công nghiệp nặng – cần nhiều năng lượng, vốn đầu tư máy móc lớn (steel production)</li>
+      <li><b>Light assembly industries</b>: công nghiệp nhẹ, lắp ráp – ít vốn (textiles and clothing)</li></ul>
+      <p>Khu vực dịch vụ chia thành: <b>business services</b> (logistics, advertising) và <b>consumer services</b> (retailing, finance, tourism).</p>`},
+    { h: "3. Cách phân tích một nền kinh tế: Examples – Strengths – Weaknesses",
+      body: `<p>Với mỗi khu vực, tìm trong bài: (1) <b>ví dụ</b> ngành, (2) <b>điểm mạnh</b> (thường sau từ: <i>benefit from, booming, leader in, enjoy</i>), (3) <b>điểm yếu</b> (thường sau: <i>however, but, suffer from, lack, decline, problems</i>).</p>
+      <p class="tip">Các từ nối báo hiệu điểm yếu: <b>However, But, despite, By contrast</b>. Đây là kỹ năng "scan" quan trọng cho bài thi đọc.</p>
+      <p><b>Competitive advantage</b> (lợi thế cạnh tranh) của một quốc gia: low labour costs (nhân công rẻ), technology (công nghệ), natural resources (tài nguyên).</p>`},
+    { h: "4. Các yếu tố chọn địa điểm đặt nhà máy (investment decisions)",
+      body: `<ul><li><b>wage costs</b> – chi phí lương</li><li><b>government support and grants</b> – hỗ trợ, trợ cấp của chính phủ</li><li><b>recruiting trained workers</b> – tuyển lao động có tay nghề</li><li><b>transport costs</b> – chi phí vận chuyển</li><li><b>suppliers</b> – nhà cung cấp</li><li><b>language and culture</b> – ngôn ngữ, văn hoá</li><li><b>taxes</b> – thuế</li><li><b>cost of land</b> – giá đất</li></ul>
+      <p>Bài nghe U2 so sánh xây nhà máy ở <b>China</b> (nhân công, đất rẻ nhưng thiếu lao động lành nghề, xa bộ phận R&D) và <b>UK</b> (đắt hơn nhưng chất lượng, gần R&D, đào tạo được nhân viên mới).</p>`}
+  ],
+  readings: [
+    { t: "Reading – The UK economy (tóm tắt)", s: `<ul><li><b>Primary</b>: farming (cơ giới hoá cao, đáp ứng 60% nhu cầu lương thực, chỉ 1% lao động; nhưng trang trại nhỏ không có lãi trên thị trường toàn cầu) + năng lượng (10% GDP, trữ lượng dầu, khí, than; nhưng đang suy giảm, sẽ phụ thuộc nhập khẩu năng lượng).</li>
+      <li><b>Secondary</b>: công nghiệp nặng cũ (steel) suy giảm, sản xuất hàng loạt (car industry) đóng cửa ⇒ mất nhiều việc làm ở miền Bắc. Thay bằng <b>specialist engineering</b> với sản phẩm <b>high added-value</b> và <b>niche markets</b>. Tỷ trọng giảm từ 20% xuống 15% GDP.</li>
+      <li><b>Service</b>: bùng nổ (booming), &gt;70% nền kinh tế; financial services, computing, marketing đóng góp 30% GDP; lực lượng lao động trình độ cao, chuyên môn tập trung ở Đông Nam. Nhưng phụ thuộc thị trường tài chính, áp lực lên hạ tầng đường bộ, đường sắt.</li></ul>`},
+    { t: "Reading – The Chinese economy (tóm tắt)", s: `<ul><li><b>Primary</b>: nông nghiệp hưởng lợi từ chuyển sang trang trại tư nhân/làng ⇒ chuyên môn hoá; thâm canh, năng suất/acre cao hơn Mỹ; xuất khẩu gạo, lúa mì, thịt. Nhưng dựa vào lao động tay chân, thiếu máy móc, vốn; ô nhiễm và thiếu nước.</li>
+      <li><b>Secondary</b>: mở cửa cho đầu tư nước ngoài & công nghệ ⇒ hiện đại hoá; dẫn đầu electronics, textiles, consumer products; nhân công rẻ, đất rẻ. Nhưng vốn vẫn đổ vào DNNN cũ lãng phí; hạ tầng kém, quan liêu, thiếu điện và nguyên liệu.</li>
+      <li><b>Service</b>: marketing, software, customer services; còn kém phát triển, thiếu vốn và kiến thức kỹ thuật. Nhưng nhu cầu tăng mạnh nhờ mức sống tăng và Internet bùng nổ; DN tư nhân tự dùng vốn ⇒ linh hoạt, độc lập với nhà nước.</li></ul>`}
+  ],
+  exercises: [
+    { id: "u2e1", type: "match", title: "Countdown – Ex.2: Match the sectors with their definitions",
+      items: [
+        { l: "1 The ___ manufactures finished products.", r: "secondary sector" },
+        { l: "2 The ___ provides the raw materials and natural resources for industry.", r: "primary sector" },
+        { l: "3 The ___ provides support activities for customers or other industries.", r: "service sector" }
+      ]},
+    { id: "u2e2", type: "mcq", title: "Countdown – Ex.4: Which sector do these companies belong to?",
+      items: [
+        { q: "BP", o: ["Primary", "Secondary", "Service"], a: 0, ex: "Khai thác dầu khí (oil exploration) ⇒ primary." },
+        { q: "Nike", o: ["Primary", "Secondary", "Service"], a: 1, ex: "Sản xuất giày, quần áo ⇒ secondary (cũng có bán lẻ)." },
+        { q: "McDonald's", o: ["Primary", "Secondary", "Service"], a: 2, ex: "Nhà hàng, đồ ăn nhanh ⇒ service." },
+        { q: "Ford", o: ["Primary", "Secondary", "Service"], a: 1, ex: "Sản xuất ô tô ⇒ secondary." },
+        { q: "Citigroup", o: ["Primary", "Secondary", "Service"], a: 2, ex: "Ngân hàng ⇒ financial services." },
+        { q: "Google", o: ["Primary", "Secondary", "Service"], a: 2, ex: "Internet, quảng cáo ⇒ service." },
+        { q: "Nestlé", o: ["Primary", "Secondary", "Service"], a: 1, ex: "Chế biến thực phẩm (food processing) ⇒ secondary." },
+        { q: "Hilton Hotels", o: ["Primary", "Secondary", "Service"], a: 2, ex: "Khách sạn, du lịch ⇒ service." },
+        { q: "Rio Tinto", o: ["Primary", "Secondary", "Service"], a: 0, ex: "Khai khoáng (mining) ⇒ primary." }
+      ]},
+    { id: "u2e3", type: "fill", title: "Vocabulary – Ex.1: Name the industries (captions a–i) and their sector",
+      intro: "Điền tên ngành theo chữ cái gợi ý. Ô thứ 2 ghi sector: primary / secondary / service.",
+      items: [
+        { q: "a s____ production (người công nhân bên lò luyện)", a: ["steel", "secondary"] },
+        { q: "b t__________ and logistics (xe tải)", a: ["transportation|transport", "service"] },
+        { q: "c a__________ (cánh đồng lúa mì)", a: ["agriculture", "primary"] },
+        { q: "d textiles and c_______ (công nhân may)", a: ["clothing", "secondary"] },
+        { q: "e f___ processing (làm bánh trong nhà máy)", a: ["food", "secondary"] },
+        { q: "f m_____ (máy đào mỏ)", a: ["mining", "primary"] },
+        { q: "g a__________ (biển quảng cáo Times Square)", a: ["advertising", "service"] },
+        { q: "h o__ exploration (giàn khoan)", a: ["oil", "primary"] },
+        { q: "i r________ (người mua sắm)", a: ["retailing|retail", "service"] }
+      ]},
+    { id: "u2e4", type: "fill", title: "Vocabulary – Ex.4: The Turkish economy – complete the report",
+      intro: "Điền tên ngành từ bài 1.",
+      items: [
+        { q: "The primary sector is made up of ___(1) which produces basic foods, like fruits, vegetables, and wheat", a: ["agriculture"] },
+        { q: "…the exploration industries like ___(2) which provide our basic energy and gas", a: ["oil exploration|oil"] },
+        { q: "…or ___(3) which extracts minerals and material for building.", a: ["mining"] },
+        { q: "The secondary sector consists of manufacturing industries, like the ___(4) industry.", a: ["car|automotive|car manufacturing|motor"], ex: "Đáp án sách gốc thường là 'car' (automotive). Ngành sản xuất tiêu biểu." },
+        { q: "Also there are the processing industries, for example ___(5).", a: ["food processing"] },
+        { q: "heavy industries which need great power and big investment in machinery, for example ___(6)", a: ["steel production|steel"] },
+        { q: "light assembly industries, like ___(7), which produce goods for the fashion industry", a: ["textiles and clothing|clothing|textiles"] },
+        { q: "Businesses need services like ___(8) to move or store goods", a: ["transportation and logistics|transportation|logistics|transport"] },
+        { q: "…and other marketing services, like ___(9) to tell customers about their products.", a: ["advertising"] },
+        { q: "…consumer services, like the ___(10) sector, which contains shops where we buy things", a: ["retailing|retail"] }
+      ]},
+    { id: "u2e5", type: "fill", title: "Reading – Complete the UK table (a–o)",
+      intro: "Điền từ/cụm từ lấy từ bài 'The UK economy'.",
+      items: [
+        { q: "Secondary – Examples: ___(a) (công nghiệp nặng cũ)", a: ["steel"] },
+        { q: "Secondary – Examples: ___(b) (sản xuất hàng loạt)", a: ["car industry|car|cars|mass manufacturing"] },
+        { q: "Secondary – Examples: ___(c) (ngành thay thế mới)", a: ["specialist engineering|new specialist engineering|engineering"] },
+        { q: "Strengths: Higher ___(d) products", a: ["added-value|added value|value-added"] },
+        { q: "Strengths: ___(e) markets", a: ["niche"] },
+        { q: "Weaknesses: Decline of ___(f) industries", a: ["old heavy|heavy"] },
+        { q: "Weaknesses: Closure of ___(g)", a: ["mass manufacturing|car industry"] },
+        { q: "Weaknesses: Big ___(h) losses", a: ["job"] },
+        { q: "Service – Examples: ___(i)", a: ["financial services|finance"] },
+        { q: "Service – Examples: ___(j)", a: ["computing"] },
+        { q: "Service – Examples: ___(k)", a: ["marketing"] },
+        { q: "Strengths: ___(l) workforce", a: ["highly qualified|highly-qualified|qualified"] },
+        { q: "Strengths: concentration of ___(m)", a: ["expertise|expertise in the south east"] },
+        { q: "Weaknesses: Dependent on ___(n)", a: ["financial markets"] },
+        { q: "Weaknesses: Infrastructure problems, e.g. ___(o)", a: ["pressure on road and rail|road and rail|road and rail infrastructure|pressure on road and rail infrastructure in the south east|road and rail infrastructure in the south east"] }
+      ]},
+    { id: "u2e6", type: "fill", title: "Reading – Complete the China table (a–t)",
+      items: [
+        { q: "Significant food exports of ___(a)", a: ["rice"] },
+        { q: "…___(b)", a: ["wheat"] },
+        { q: "…and ___(c)", a: ["meat"] },
+        { q: "Weakness: Lack of ___(d) and investment capital", a: ["machinery"] },
+        { q: "Weakness: Pollution and ___(e) problems", a: ["water"] },
+        { q: "Secondary – Examples: Electronics, ___(f)", a: ["textiles"] },
+        { q: "Secondary – Examples: ___(g)", a: ["consumer products"] },
+        { q: "Modernization caused by: ___(h)", a: ["foreign investment and technology|foreign investment|opening of the country to foreign investment and technology"] },
+        { q: "Strength: Cheap ___(i)", a: ["land"] },
+        { q: "Weakness: Still investing in old ___(j)", a: ["state sector industries|state sector|state industries"] },
+        { q: "Weakness: Poor ___(k)", a: ["infrastructure"] },
+        { q: "Weakness: Shortages of ___(l)", a: ["electric power|electricity|power"] },
+        { q: "…and ___(m)", a: ["raw materials"] },
+        { q: "Service – Examples: Marketing, ___(n)", a: ["software"] },
+        { q: "Service – Examples: ___(o)", a: ["customer services|customer service"] },
+        { q: "Demand increased because of ___(p)", a: ["rise in living standards|the rise in living standards|living standards"] },
+        { q: "…and ___(q)", a: ["boom in internet use|internet use|internet|a huge boom in internet use"] },
+        { q: "Private companies use ___(r) for investment", a: ["their own capital|own capital"] },
+        { q: "Businesses lack ___(s)", a: ["finance"] },
+        { q: "…and ___(t) knowledge", a: ["technical"] }
+      ]},
+    { id: "u2e7", type: "info", title: "Listening – Investment decisions (▶ U2)",
+      html: `<p class="warn">Bảng số liệu (labor costs, cost of land, delivery time, defect levels) cần file nghe/transcript để điền chính xác.</p>
+      <p><b>Ý chính cần nắm cho bài nghe:</b> China – chi phí lao động và đất thấp hơn nhiều, nhà cung cấp gần ⇒ giao hàng nhanh, tiết kiệm chi phí; nhưng <i>lack of trained/skilled workers</i>, tỷ lệ lỗi (defect levels) cao hơn, và không liên lạc được với bộ phận R&D ở UK ⇒ hạn chế khả năng <i>develop</i> sản phẩm mới và <i>launch</i> thành công. UK – chi phí cao hơn nhưng đào tạo nhân viên mới cùng nhân viên cũ, chất lượng tốt hơn, R&D đặt tại đây ⇒ <i>close</i> contact với đội sản xuất.</p>`}
+  ],
+  discussion: [
+    { q: "Where do most people in your country work? Which sectors are growing and which are declining?", model: "In Vietnam, agriculture used to employ most people, but today the service and manufacturing sectors employ more. Manufacturing (electronics, textiles, footwear) and services (retail, tourism, finance, IT) are growing fast, while the share of agriculture is declining." },
+    { q: "What are the key strengths of an emerging economy like China?", model: "Its key strengths are a huge low-cost workforce, relatively cheap land, foreign investment and technology, a leading position in electronics, textiles and consumer products, and a fast-growing domestic market." },
+    { q: "Compare the UK and China: which has the stronger service sector? Why?", model: "The UK has a much stronger service sector: it represents over 70% of the economy and benefits from a highly qualified workforce and expertise in finance, computing and marketing. China's service sector is still underdeveloped because businesses lack finance and technical knowledge, although demand is growing fast." },
+    { q: "Which three factors are most important when choosing a country for a factory?", model: "In my opinion, the three most important factors are: 1) wage costs, because labour is usually the biggest cost; 2) recruiting trained workers, because quality depends on skills; 3) transport costs and suppliers, because they affect delivery time and total cost." }
+  ]
+});
+
+/* ===================== UNIT 3 ===================== */
+UNITS.push({
+  id: 3, title: "Stock Markets", vn: "Thị trường chứng khoán",
+  goal: "Hiểu chức năng thị trường chứng khoán, IPO, bảo lãnh phát hành, cổ tức, lãi vốn, phát hành quyền mua; các loại nhà đầu tư; vì sao thị trường lên xuống; chiến lược đầu tư.",
+  concepts: [
+    { h: "1. Private company vs Public company",
+      body: `<ul><li><b>Private company</b> (công ty tư nhân/TNHH): cổ phần do một số ít người nắm, <u>không niêm yết</u>, không bán cho công chúng.</li>
+      <li><b>Public company</b> (công ty đại chúng – plc): bán cổ phần cho công chúng, <u>được niêm yết (listed)</u> trên sàn chứng khoán.</li></ul>
+      <p><b>Stock index</b> (chỉ số chứng khoán, vd. FTSE 100, S&P 500) = giá trị của một "rổ" các công ty hàng đầu niêm yết trên sàn ⇒ cho nhà đầu tư biết thị trường đang lên hay xuống.</p>`},
+    { h: "2. Hai chức năng của thị trường chứng khoán",
+      body: `<ol><li><b>Primary market / primary listing</b> (thị trường sơ cấp): nơi công ty <b>huy động vốn mới</b> bằng cách phát hành cổ phiếu. Lần đầu tiên gọi là <b>IPO – Initial Public Offering</b>.</li>
+      <li><b>Secondary market</b> (thị trường thứ cấp): nơi nhà đầu tư <b>mua bán lại</b> cổ phiếu với nhau hằng ngày; giá biến động theo cung cầu (fluctuate according to demand).</li></ol>
+      <p><b>Quy trình IPO:</b> công ty thuê <b>investment bank</b> (ngân hàng đầu tư) ⇒ ngân hàng thăm dò nhu cầu nhà đầu tư để định giá (valuation) và <b>underwrite</b> (bảo lãnh phát hành) = <u>cam kết mua lại toàn bộ cổ phiếu không bán được</u>. Làm việc cùng <b>regulators</b> (FSA ở Anh, SEC ở Mỹ) để đảm bảo công ty tuân thủ quy định, không lừa đảo nhà đầu tư.</p>`},
+    { h: "3. Nhà đầu tư kiếm tiền thế nào? (2 loại lợi nhuận)",
+      body: `<ol><li><b>Dividend</b> (cổ tức): phần lợi nhuận chia cho cổ đông, thường 2 lần/năm. <b>Board of Directors</b> quyết định chia bao nhiêu, giữ lại (retain) bao nhiêu để tái đầu tư.</li>
+      <li><b>Capital gain</b> (lãi vốn): lãi do giá cổ phiếu tăng khi bán.</li></ol>
+      <p><b>Vì sao có công ty lớn không trả cổ tức?</b> Vì họ cho rằng giữ lợi nhuận lại để phát triển doanh nghiệp tốt hơn; nếu thành công, giá cổ phiếu tăng ⇒ cổ đông có lợi lâu dài (capital gain).</p>
+      <p><b>Quyền của cổ đông:</b> biểu quyết tại <b>AGM</b> (Đại hội cổ đông thường niên) và nhận một phần lợi nhuận.</p>
+      <p><b>Share (UK) = Stock (US)</b>; shareholder = stockholder.</p>`},
+    { h: "4. Rights issue – vì sao giá cổ phiếu giảm?",
+      body: `<p><b>Rights issue</b> (phát hành quyền mua / phát hành thêm cho cổ đông hiện hữu): công ty phát hành <u>cổ phiếu mới</u> để huy động thêm vốn.</p>
+      <p><b>Bản chất giá giảm (dilution – pha loãng):</b> công ty có thêm tiền, nhưng số cổ phiếu tăng ⇒ mỗi cổ phiếu chỉ đại diện cho <u>một tỷ lệ nhỏ hơn</u> của công ty ⇒ giá trị mỗi cổ phiếu giảm.</p>
+      <p class="tip">Ví dụ: công ty có 100 cổ phiếu, bạn có 10 = 10%. Phát hành thêm 100 cổ phiếu ⇒ 10 cổ phiếu của bạn chỉ còn 5%.</p>`},
+    { h: "5. Các loại nhà đầu tư & chỉ số kỹ thuật",
+      body: `<ul><li><b>Institutional investors</b> (nhà đầu tư tổ chức – ảnh hưởng lớn nhất): pension funds (quỹ hưu trí), fund managers of mutual funds (quỹ tương hỗ), hedge funds (quỹ phòng hộ), investment banks.</li>
+      <li><b>Retail investors</b> (nhà đầu tư nhỏ lẻ): ordinary people – ảnh hưởng chủ yếu đến cổ phiếu công ty nhỏ.</li>
+      <li><b>P/E ratio</b> (price/earnings): giá cổ phiếu so với lợi nhuận mỗi cổ phiếu.</li>
+      <li><b>Broker's report</b>: báo cáo nhận định triển vọng, định giá công ty của công ty môi giới. <b>Market capitalization</b> = tổng giá trị thị trường của công ty.</li></ul>`},
+    { h: "6. Vì sao thị trường lên xuống? (Fundamentals)",
+      body: `<ul><li><b>Economic data</b> (vĩ mô): inflation rate, interest rates, unemployment… Lãi suất <b>giảm</b> ⇒ vay rẻ, DN lãi hơn, tiền gửi kém hấp dẫn ⇒ <b>thị trường tăng</b>.</li>
+      <li><b>Company news</b> (vi mô): company results, contract wins, announcements.</li>
+      <li>Giá cổ phiếu phản ánh <b>kỳ vọng lợi nhuận tương lai</b> (probable future profits).</li></ul>`}
+  ],
+  readings: [
+    { t: "Background & Broker's speech (tóm tắt)", s: `<p>Mỗi ngày ~£16bn cổ phiếu được giao dịch ở London. Mua cổ phiếu = trở thành <b>đồng sở hữu</b> một phần công ty ⇒ có quyền biểu quyết tại AGM và nhận cổ tức. HĐQT quyết định mức cổ tức. Nhà đầu tư kỳ vọng 2 loại lợi nhuận: cổ tức và tăng giá vốn. Muốn niêm yết phải qua IPO do ngân hàng đầu tư tổ chức và bảo lãnh, làm việc với cơ quan quản lý (FSA/SEC). Sau đó cổ phiếu giao dịch trên thị trường thứ cấp. Khi cần thêm vốn: rights issue ⇒ mỗi cổ phiếu giảm giá trị.</p>`}
+  ],
+  exercises: [
+    { id: "u3e1", type: "match", title: "Countdown – Ex.3: Match the indices with the cities",
+      intro: "Một thành phố có 2 chỉ số (New York).",
+      items: [
+        { l: "1 Dow Jones", r: "New York" }, { l: "2 FTSE 100", r: "London" }, { l: "3 Nikkei", r: "Tokyo" },
+        { l: "4 CAC40", r: "Paris" }, { l: "5 DAX", r: "Frankfurt" }, { l: "6 Hang Seng", r: "Hong Kong" },
+        { l: "7 NASDAQ", r: "New York ", ex: "NASDAQ cũng ở New York (cùng Dow Jones)." },
+        { l: "8 Bovespa", r: "São Paulo" }, { l: "9 MICEX", r: "Moscow" }, { l: "10 Straits Times Index", r: "Singapore" }
+      ]},
+    { id: "u3e2", type: "mcq", title: "Countdown – Ex.4: Which sectors would the news affect? Positive or negative?",
+      items: [
+        { q: "'Oil prices hit a 2-year high'", o: ["Positive for oil & gas companies; negative for airlines, transport and chemicals", "Positive for airlines", "No effect on any sector"], a: 0, ex: "Giá dầu cao ⇒ công ty dầu khí lãi hơn; hãng bay, vận tải tốn chi phí nhiên liệu hơn." },
+        { q: "'Central bank cuts interest rates'", o: ["Positive for housebuilders, retailers and borrowers in general (cheaper loans)", "Negative for the whole stock market", "Only affects oil companies"], a: 0, ex: "Lãi suất giảm ⇒ vay rẻ ⇒ người dân mua nhà, tiêu dùng nhiều hơn ⇒ tốt cho bất động sản, bán lẻ; nói chung tốt cho thị trường." },
+        { q: "'Consumer debt levels continue to rise'", o: ["Negative for retailers and banks (risk of bad debts, less spending in future)", "Positive for all sectors", "Positive for banks only"], a: 0, ex: "Người dân nợ nhiều ⇒ sẽ phải cắt giảm chi tiêu ⇒ xấu cho bán lẻ; ngân hàng có rủi ro nợ xấu." },
+        { q: "'London wins Olympic bid'", o: ["Positive for construction, hotels, tourism, leisure and transport", "Negative for construction", "Negative for hotels"], a: 0, ex: "Thế vận hội ⇒ xây dựng sân vận động, hạ tầng; du khách tăng." }
+      ]},
+    { id: "u3e3", type: "mcq", title: "Reading – Ex.1: Students' questions about the stock market",
+      items: [
+        { q: "1 What is the difference between a share and a stock?", o: ["No real difference: 'share' is used in UK markets, 'stock' in American markets", "A stock is a type of bond", "Shares are only for private companies"], a: 0, ex: "'The English markets use the word share, the American markets also use the word stocks.'" },
+        { q: "2 What rights do you get if you buy a company's shares?", o: ["The right to vote at the AGM and to receive a percentage of the profits", "The right to manage the company every day", "The right to a fixed salary"], a: 0 },
+        { q: "3 What is a dividend?", o: ["The part of the company's profit distributed to shareholders, usually twice a year", "The increase in the share price", "A bank loan to the company"], a: 0 },
+        { q: "4 Who decides how much dividend to pay?", o: ["The Board of Directors", "The shareholders at the stock exchange", "The market regulator"], a: 0 },
+        { q: "5 Why do some companies not pay dividends?", o: ["They retain the profit to grow the business, so the share price should rise in the long term", "Because they are not profitable", "Because the law forbids it"], a: 0 },
+        { q: "6 What are the two main ways shareholders make money?", o: ["Dividends and capital gains (an increase in the share price when they sell)", "Interest and fees", "Salary and bonus"], a: 0 },
+        { q: "7 How does a company become a listed company?", o: ["By coming to the market through an IPO", "By paying a dividend", "By making a rights issue"], a: 0 },
+        { q: "8 What is an IPO?", o: ["An Initial Public Offering – the first time a company offers its shares to the public", "An International Price Order", "A type of hedge fund"], a: 0 },
+        { q: "9 What does it mean when an investment bank 'underwrites' a company's shares?", o: ["It promises to buy any shares that are not sold to other investors", "It audits the company's accounts", "It sets the interest rate"], a: 0 },
+        { q: "10 Primary listing vs secondary market?", o: ["Primary listing = first offer of shares to raise capital; secondary market = investors buy and sell existing shares every day", "They are the same", "Primary = big companies; secondary = small companies"], a: 0 },
+        { q: "11 What is the role of the market regulators (FSA, SEC)?", o: ["To make sure companies follow the regulations and do not defraud investors", "To buy unsold shares", "To decide dividends"], a: 0 },
+        { q: "12 What is a rights issue?", o: ["Issuing new shares to raise more capital", "Paying a special dividend", "Buying back shares"], a: 0 },
+        { q: "13 Why does the share price usually go down after a rights issue?", o: ["Each share now represents a smaller percentage of the whole company (dilution)", "Because the company has less money", "Because the regulator punishes the company"], a: 0, ex: "Công ty có thêm tiền nhưng mỗi cổ phiếu chiếm tỷ lệ nhỏ hơn ⇒ giá trị mỗi cổ phiếu giảm." }
+      ]},
+    { id: "u3e4", type: "fill", title: "Listening – Ex.2: Complete the slides 'Why do stock markets move?'",
+      intro: "Gợi ý dựa trên nội dung bài đọc & sơ đồ (đối chiếu lại với audio nếu có).",
+      items: [
+        { q: "Fundamentals → (a) ______ : inflation rate, …, unemployment", a: ["economic data|economic news|macroeconomic data|the economy|economy|economic indicators"], ex: "Nhánh chứa inflation, unemployment = dữ liệu kinh tế vĩ mô." },
+        { q: "Fundamentals → (b) ______ : company results, contract wins", a: ["company news|company information|company data|company"], ex: "Nhánh chứa kết quả kinh doanh, hợp đồng = tin doanh nghiệp." },
+        { q: "(c) inflation rate, ______, unemployment", a: ["interest rates|interest rate"], ex: "Chỉ số vĩ mô còn thiếu = lãi suất." },
+        { q: "Types of investor → (d) ______ : ordinary people", a: ["retail investors|retail"], ex: "Ordinary people = retail investors." },
+        { q: "Types of investor → (e) ______ : …, hedge funds, investment banks, …", a: ["institutional investors|institutional|institutions"] },
+        { q: "(f) ______ (một loại nhà đầu tư tổ chức)", a: ["pension funds|pension fund|fund managers|mutual funds"] },
+        { q: "(g) ______ (một loại nhà đầu tư tổ chức khác)", a: ["fund managers|mutual funds|pension funds|insurance companies"] }
+      ]},
+    { id: "u3e5", type: "mcq", title: "Listening – Ex.3: True or False?",
+      intro: "Câu 1 và 6 phụ thuộc trực tiếp vào audio. Câu 2–5 suy ra được từ kiến thức bài học.",
+      items: [
+        { q: "2 A fall in interest rates will boost the stock market.", o: ["True", "False"], a: 0, ex: "Lãi suất giảm ⇒ vay rẻ, lợi nhuận DN tăng, tiền chuyển từ tiết kiệm sang cổ phiếu ⇒ thị trường tăng." },
+        { q: "3 Analysts upgrade a stock because they want to attract buyers.", o: ["True", "False"], a: 1, ex: "Analysts nâng hạng (upgrade) vì họ kỳ vọng lợi nhuận/triển vọng tốt hơn, không phải để thu hút người mua." },
+        { q: "4 The share price tells you about the probable future profits.", o: ["True", "False"], a: 0, ex: "Giá cổ phiếu phản ánh kỳ vọng lợi nhuận tương lai." },
+        { q: "5 Retail investors have the biggest influence on profits/the market.", o: ["True", "False"], a: 1, ex: "Institutional investors (quỹ hưu trí, quỹ đầu tư, hedge funds) có ảnh hưởng lớn nhất." }
+      ]},
+    { id: "u3e6", type: "open", title: "Professional skills – Investment strategies A–F",
+      intro: "Phân tích ưu/nhược điểm từng chiến lược (dùng khi thảo luận/thi nói).",
+      items: [
+        { q: "A Spread your risks by investing in several companies in different sectors.", model: "This is diversification. Advantage: it reduces your exposure to any one company or sector. Disadvantage: returns may be average. → One of the most successful strategies." },
+        { q: "B Invest only in large international companies with strong brands.", model: "Blue-chip strategy. Advantage: lower risk, stable dividends. Disadvantage: slower growth; you miss opportunities in small, fast-growing companies." },
+        { q: "C 'Be fearful when others are greedy and greedy when others are fearful.' (Warren Buffett)", model: "Contrarian strategy: buy when prices are low because everyone is selling, sell when everyone is buying. Advantage: buy cheap, sell high. Disadvantage: needs courage, knowledge and patience. → Very successful in the long term." },
+        { q: "D Invest for at least five years; day trading is a way to lose money.", model: "Long-term investing. Advantage: short-term fluctuations even out; lower transaction costs. Disadvantage: money is tied up for a long time. → Usually successful." },
+        { q: "E Invest in a general fund in which a manager decides what to buy or sell.", model: "Advantage: professional management and diversification. Disadvantage: management fees; performance depends on the fund manager." },
+        { q: "F 'Buy on the rumour, sell on the news.'", model: "Speculative strategy. Advantage: possible quick profits. Disadvantage: very risky; rumours may be false; it is close to gambling." },
+        { q: "Explain Buffett's philosophy: 'look at stocks as business, use the market's fluctuations to your advantage, and seek a margin of safety.'", model: "Buy a share as if you are buying part of a real business; use price falls to buy cheaply; and only buy when the price is clearly below the real value of the company (a margin of safety), so that you are protected if you are wrong." }
+      ]}
+  ],
+  discussion: [
+    { q: "What is the difference between a private company and a public company? Which is listed?", model: "A private company is owned by a small group of people and its shares are not offered to the public. A public company sells its shares to the public and is listed on a stock market." },
+    { q: "What is the main index in your country? What are the biggest companies in it?", model: "In Vietnam the main index is the VN-Index on the Ho Chi Minh City Stock Exchange (HOSE); there is also the VN30 and the HNX-Index in Hanoi. The biggest companies include Vietcombank, Vingroup, Vinhomes, BIDV, Viettel-related firms, FPT, Hoa Phat, Vinamilk and Masan." },
+    { q: "Which three factors have the biggest effect on a company's share price?", model: "I think company financial results, company announcements (such as new contracts) and movements in interest rates have the biggest effect, because they change investors' expectations of future profits." }
+  ]
+});
+
+/* ===================== UNIT 4 ===================== */
+UNITS.push({
+  id: 4, title: "Company reporting", vn: "Báo cáo doanh nghiệp",
+  goal: "Nắm cấu trúc báo cáo thường niên, kỹ năng skim/scan, bảng cân đối kế toán (balance sheet), cách viết thông cáo báo chí (press release) chuẩn.",
+  concepts: [
+    { h: "1. Các kênh công ty báo cáo ra bên ngoài",
+      body: `<ul><li><b>Annual report</b> – báo cáo thường niên (bắt buộc theo luật, gửi mọi cổ đông)</li><li><b>Annual general meeting (AGM)</b> – đại hội cổ đông thường niên</li><li><b>Analyst meetings</b> – gặp gỡ nhà phân tích</li><li><b>Trade fairs and exhibitions</b> – hội chợ, triển lãm</li><li><b>Open days and factory visits</b> – ngày mở cửa, tham quan nhà máy</li><li><b>Press releases</b> – thông cáo báo chí (thông báo các sự kiện ảnh hưởng đến định giá công ty)</li></ul>`},
+    { h: "2. Cấu trúc báo cáo thường niên (7 phần – hay thi)",
+      body: `<table class="t"><tr><th>Phần</th><th>Nội dung</th><th>Ai quan tâm?</th></tr>
+      <tr><td><b>Chairman's statement</b> (letter to shareholders)</td><td>Tổng quan hoạt động năm qua theo từng mảng</td><td>Shareholder</td></tr>
+      <tr><td><b>Outlook</b></td><td>Triển vọng tương lai – HĐQT tự tin thế nào</td><td>Shareholder, analyst</td></tr>
+      <tr><td><b>Corporate governance</b></td><td>Cách HĐQT quản trị công ty, tuân thủ bộ quy tắc quản trị tốt (codes – khuyến nghị, không phải luật)</td><td>Regulator, shareholder</td></tr>
+      <tr><td><b>Statement of directors' responsibilities</b></td><td>Trách nhiệm pháp lý của HĐQT khi lập báo cáo</td><td>Regulator</td></tr>
+      <tr><td><b>Independent auditor's report</b></td><td>Ý kiến kiểm toán độc lập về độ chính xác số liệu ("a true and fair view")</td><td><b>Regulator</b></td></tr>
+      <tr><td><b>Financial statements</b></td><td>Balance sheet (giá trị: tài sản & nợ), income statement (lãi/lỗ – xem operating profit), cash flow statement</td><td>Investor/shareholder, analyst</td></tr>
+      <tr><td><b>Notes to the accounts</b></td><td>Thuyết minh – cách tính các con số</td><td><b>Analyst</b>, accountant</td></tr></table>`},
+    { h: "3. Kỹ năng đọc: Skim vs Scan",
+      body: `<ul><li><b>Skim</b> (đọc lướt): đọc nhanh để nắm <u>ý chính</u> mỗi đoạn – mẹo: chỉ đọc <b>câu đầu</b> của mỗi đoạn.</li>
+      <li><b>Scan</b> (đọc quét): tìm <u>thông tin cụ thể</u> – tên, ngày tháng, con số, tiêu đề (vd. lợi nhuận bao nhiêu, tên chủ tịch).</li></ul>`},
+    { h: "4. Balance sheet – Bảng cân đối kế toán (bản chất)",
+      body: `<p>Cho biết <b>giá trị công ty tại cuối năm tài chính</b>.</p>
+      <div class="formula">ASSETS (tài sản – những gì công ty SỞ HỮU) − LIABILITIES (nợ – những gì công ty NỢ) = NET ASSETS = SHAREHOLDERS' FUNDS</div>
+      <ul><li><b>Fixed assets</b> (tài sản cố định): đầu tư dài hạn, khó bán nhanh – property, machinery.</li>
+      <li><b>Current assets</b> (tài sản ngắn hạn): stock (hàng tồn kho – nguyên liệu, linh kiện), <b>debtors</b> (khoản phải thu – tiền khách hàng nợ công ty), cash.</li>
+      <li><b>Current liabilities</b> (nợ ngắn hạn): overdraft (thấu chi), tiền nợ <b>creditors/suppliers</b> (nhà cung cấp).</li>
+      <li><b>Long-term liabilities</b> (nợ dài hạn): bank loans.</li>
+      <li><b>Capital and reserves</b>: share capital + reserves = shareholders' funds.</li></ul>
+      <p class="tip">Bẫy hay gặp: <b>debtors</b> = người NỢ công ty (là tài sản); <b>creditors</b> = người công ty NỢ (là nợ phải trả). "Stock" trong kế toán Anh = hàng tồn kho (không phải cổ phiếu!).</p>`},
+    { h: "5. Press release – thông cáo báo chí chuẩn",
+      body: `<p><b>Cấu trúc:</b> References (date for release, business sector, for the attention of) → Story (catchy headline, story, quotation, contact address, links/bookmarks).</p>
+      <ul><li><b>Catchy headline</b>: tiêu đề ngắn, thu hút sự chú ý.</li>
+      <li>Dùng ngôi thứ 3 (<i>it, they, he, she</i>), <u>không</u> dùng I/we ⇒ khách quan, chuyên nghiệp, nhà báo dùng lại được ngay.</li>
+      <li>Văn phong trang trọng, tránh từ quảng cáo (amazing, terrific, cool, really great).</li>
+      <li>Có <b>quotation</b> trong ngoặc kép từ người có chức danh ⇒ nhà báo trích dẫn trực tiếp, tăng độ tin cậy.</li>
+      <li>Chỉ nêu sự thật, có nguồn; có địa chỉ liên hệ, hyperlinks.</li></ul>`}
+  ],
+  readings: [
+    { t: "What should I look for in the annual report? (tóm tắt 6 đoạn)", s: `<ol><li>Luật bắt buộc công ty đại chúng công bố báo cáo thường niên, gửi cổ đông; nội dung chủ yếu do luật quy định.</li>
+      <li>Chairman's statement: cái nhìn nhanh về kết quả năm qua; cuối phần có outlook statement.</li>
+      <li>Corporate governance: cách HĐQT quản lý công ty, tuân theo các bộ quy tắc (không bắt buộc như luật).</li>
+      <li>Statement of directors' responsibilities (trách nhiệm pháp lý của HĐQT) và independent auditors' report (ý kiến kiểm toán – cơ quan quản lý quan tâm).</li>
+      <li>Financial statements: balance sheet (giá trị: tài sản, nợ) và income statement (lãi/lỗ – operating profit).</li>
+      <li>Notes to the accounts: thuyết minh chi tiết, dành cho chuyên gia (equity analysts, accountants).</li></ol>`},
+    { t: "Further reading – xu hướng minh bạch (tóm tắt)", s: `<p>Công ty chịu áp lực ngày càng lớn từ chính phủ và các nhóm gây áp lực phải công bố nhiều hơn ⇒ báo cáo dài, phức tạp. Nhiều công ty báo cáo thêm về: <b>environmental policy</b> (nguyên liệu, tái chế, năng lượng, carbon), <b>corporate governance and pay</b> (cách ra quyết định, lương lãnh đạo), <b>working conditions</b> (an toàn lao động), <b>trading policy</b> (fair trade).</p>`}
+  ],
+  exercises: [
+    { id: "u4e1", type: "match", title: "Reading – Ex.1: Skim – which paragraph (1–6) contains…?",
+      items: [
+        { l: "how to get an overview of the company's activities", r: "Paragraph 2", ex: "Chairman's statement gives a quick view of the company's performance." },
+        { l: "the financial statements of the company", r: "Paragraph 5" },
+        { l: "the way a company is managed", r: "Paragraph 3", ex: "Corporate governance." },
+        { l: "the opinion of the auditors", r: "Paragraph 4" },
+        { l: "the notes explaining the accounts", r: "Paragraph 6" },
+        { l: "what the law says a company report has to contain", r: "Paragraph 1" }
+      ]},
+    { id: "u4e2", type: "mcq", title: "Reading – Ex.3: Which sections are of most interest to…?",
+      items: [
+        { q: "1 a shareholder?", o: ["Chairman's statement, outlook and financial statements", "Only the notes to the accounts", "Only the statement of directors' responsibilities"], a: 0, ex: "Cổ đông muốn biết kết quả, triển vọng và giá trị/lợi nhuận công ty." },
+        { q: "2 a regulator?", o: ["The independent auditor's report (plus corporate governance and directors' responsibilities)", "The outlook", "The chairman's photo"], a: 0, ex: "'The latter is of interest to regulators because it gives the opinion of external auditors on the accuracy of the published financial figures.'" },
+        { q: "3 an analyst?", o: ["The notes to the accounts and financial statements (and outlook)", "Only the chairman's statement", "Corporate governance only"], a: 0, ex: "'Notes… are of interest to professionals like equity analysts… as they show how all the figures were calculated.' Analysts cũng xem outlook để đánh giá độ tự tin của HĐQT." }
+      ]},
+    { id: "u4e3", type: "match", title: "Vocabulary – Balance sheet Ex.1: Find the accounting expressions",
+      items: [
+        { l: "1 the investments made in machinery and property", r: "fixed assets" },
+        { l: "2 the long-term debts of the company", r: "long-term liabilities" },
+        { l: "3 the value of raw materials and components owned by the company", r: "stock" },
+        { l: "4 the money owed to the company by customers", r: "debtors" },
+        { l: "5 the money the company owes on its overdraft and to its suppliers", r: "current liabilities" },
+        { l: "6 the total assets minus the total liabilities", r: "total net assets" }
+      ]},
+    { id: "u4e4", type: "fill", title: "Vocabulary – Balance sheet Ex.2: Complete Reklam's balance sheet (£m)",
+      intro: "Dùng email: property £30m, machinery £2m, stocks £25m, customers owe £5m, cash £3m; owes suppliers £12m, overdraft £2m, bank loans £40m. Chỉ ghi số.",
+      items: [
+        { q: "(a) FIXED ASSETS", a: ["32|32m|£32m"], ex: "Property 30 + machinery 2 = 32." },
+        { q: "(b) stock", a: ["25|25m|£25m"] },
+        { q: "(c) debtors", a: ["5|5m|£5m"], ex: "Money owed by customers = debtors." },
+        { q: "(d) cash", a: ["3|3m|£3m"] },
+        { q: "(e) current liabilities", a: ["14|14m|£14m"], ex: "Suppliers 12 + overdraft 2 = 14." },
+        { q: "(f) long-term liabilities", a: ["40|40m|£40m"], ex: "Bank loans 40. Kiểm tra: 32 + 25 + 5 + 3 = 65; 65 − 14 − 40 = 11 = Total net assets ✔" }
+      ]},
+    { id: "u4e5", type: "mcq", title: "Writing – Ex.1: Press release tips",
+      items: [
+        { q: "1 What do they mean by a 'catchy headline'?", o: ["A short, interesting headline that attracts journalists' attention", "A very long, detailed title", "A headline with the company's address"], a: 0 },
+        { q: "2 Why do they advise you to use third-person forms like 'it' and 'they'?", o: ["To sound objective and formal, so journalists can use the text directly in their reports", "Because 'I' and 'we' are grammatically wrong", "To make the text shorter"], a: 0 },
+        { q: "3 Why is a quotation important?", o: ["Journalists can quote it directly; it adds a human voice and authority to the story", "It replaces the contact details", "It makes the press release longer"], a: 0 }
+      ]},
+    { id: "u4e6", type: "open", title: "Writing – Ex.2: What is wrong with the Arno Technologies press release?",
+      items: [
+        { q: "Is the choice of language appropriate? Find informal words and suggest alternatives.", model: "Too informal/sales-like: 'amazing' → 'new'; 'looks really great' → 'is equipped with'; 'state of the art' OK; 'We are really excited' → delete; 'cool ceremony' → 'official opening ceremony'; 'wonderful architecture' → delete; 'Our boss' → 'the CEO, [name]'; 'when the builders go' → 'when construction is completed'; 'ring the company' → 'contact the company'." },
+        { q: "Does it use third-person pronouns?", model: "No. It uses 'we' and 'our' throughout. It should use 'Arno Technologies', 'the company', 'it', 'they'." },
+        { q: "Are all the points relevant? What should be crossed out?", model: "Not relevant: 'Journalists will be very interested in the news', 'We are really excited', 'expect good reports on our wonderful architecture', 'We welcome everyone to the ceremony'." },
+        { q: "Does it give good references or contact links?", model: "No. It has no date/time for release, no business sector, no 'for the attention of', no named person in the quotation, no contact address, phone, email or website link." },
+        { q: "Rewrite the press release (model).", model: "FOR IMMEDIATE RELEASE – 22 November 2026\nSector: Technology / Green building\nFor the attention of: business and technology editors\n\nARNO TECHNOLOGIES OPENS GREEN HEADQUARTERS IN MALDEVISE\n\nArno Technologies has completed its new headquarters in Maldevise. The building uses solar panels and wind turbines to generate electricity. The Prime Minister of Maldevise will officially open the building next week.\n\nThe company will move its research, sales and marketing departments into the new building. It also plans to recruit and train young local people.\n\n\"We estimate that the building's green technology will save the company $2m a year,\" said [Name], CEO of Arno Technologies.\n\nContact: Press Office, Arno Technologies, [address], tel. [ ], email press@arno.com, www.arno.com" }
+      ]},
+    { id: "u4e7", type: "info", title: "Listening – The chairman's statement at the AGM (▶ U4)",
+      html: `<p class="warn">Phần điền thông tin & sửa lỗi ghi chép của nhà phân tích cần file nghe/transcript để có đáp án chính xác.</p>
+      <p><b>Gợi ý tư duy logic để phát hiện lỗi trong ghi chép:</b></p>
+      <ul><li>"Costs increased by 2% – achieved by closing R&D department" ⇒ vô lý: đóng cửa bộ phận thì chi phí phải <b>giảm</b> ⇒ nhiều khả năng là <i>costs decreased/were cut</i>.</li>
+      <li>"Europe outlook poor. Sales to decline… Increased spending on marketing" ⇒ kiểm tra lại số % và hướng.</li>
+      <li>"Partnership with Microsoft to sell personal computers" vs Awards "best new security software" ⇒ chú ý tên đối tác/sản phẩm.</li>
+      <li>"Raised $2m by issuing new shares at 43 pence" ⇒ kiểm tra số tiền và giá.</li></ul>
+      <p>Khi nghe, so sánh từng dòng: <b>số liệu, hướng tăng/giảm, tên riêng, địa điểm</b> – đây là 4 loại lỗi hay gặp.</p>`}
+  ],
+  discussion: [
+    { q: "What is the purpose of each communication (annual report, AGM, analyst meetings, trade fairs, open days)?", model: "The annual report informs shareholders about performance and the financial position. The AGM lets shareholders hear the chairman, ask questions and vote. Analyst meetings explain results to analysts who advise investors. Trade fairs present products to customers and the media. Open days and factory visits build a good public image and relationships with the local community." },
+    { q: "What should companies be forced by law to publish? Choose the three most important.", model: "I think the three most important are: 1) the risks of investing in their business, because investors need this to make decisions; 2) their policy on health and safety of workers, including child labour, because it is about human rights; 3) the effect of their activities on the environment, because it affects the whole society. I also support publishing how much top management is paid, to improve transparency." }
+  ]
+});
+
+</script>
+<script>
+/* ===================== UNIT 5 ===================== */
+UNITS.push({
+  id: 5, title: "Management styles", vn: "Phong cách quản lý",
+  goal: "Mô tả phẩm chất nhà quản lý (tính từ + tiền tố phủ định + danh từ), các cặp phong cách quản lý đối lập, Thuyết X/Y, empowerment & delegation.",
+  concepts: [
+    { h: "1. Vai trò của nhà quản lý (roles of a manager)",
+      body: `<p>motivator (người tạo động lực), problem-solver, friend, mediator (người hoà giải), monitor (người giám sát), organizer, leader, decision-maker, role model (tấm gương).</p>
+      <p>Tiêu chí đánh giá thành công: <b>loyalty of staff</b> (lòng trung thành của nhân viên), <b>achievement of results</b> (đạt kết quả), <b>popularity with superiors</b> (được cấp trên quý).</p>`},
+    { h: "2. Tiền tố phủ định & danh từ – quy tắc chọn tiền tố",
+      body: `<table class="t"><tr><th>Tiền tố</th><th>Quy tắc/gợi ý</th><th>Ví dụ</th></tr>
+      <tr><td><b>il-</b></td><td>trước từ bắt đầu bằng <b>l</b></td><td>illogical</td></tr>
+      <tr><td><b>ir-</b></td><td>trước từ bắt đầu bằng <b>r</b></td><td>irresponsible</td></tr>
+      <tr><td><b>in-</b> (im- trước p/m/b)</td><td>nhiều từ gốc Latin</td><td>inconsiderate, incompetent, inefficient, inflexible, indecisive</td></tr>
+      <tr><td><b>dis-</b></td><td>học thuộc</td><td>disloyal, disorganised</td></tr>
+      <tr><td><b>un-</b></td><td>phổ biến nhất</td><td>uncreative, undiplomatic, uninspiring, unsociable, unsupportive</td></tr></table>
+      <p><b>Danh từ:</b> -tion (consideration, organisation, inspiration), -ence (competence), -ity (creativity, flexibility, responsibility, sociability), -cy (diplomacy, efficiency), -ty (loyalty), -ic (logic), -sion (decision).</p>`},
+    { h: "3. Các cặp phong cách quản lý đối lập",
+      body: `<table class="t"><tr><th>Phong cách</th><th>Đối lập</th><th>Bản chất</th></tr>
+      <tr><td>autocratic (độc đoán)</td><td><b>democratic</b> (dân chủ)</td><td>một người quyết vs. mọi người cùng tham gia</td></tr>
+      <tr><td>centralizing (tập trung quyền)</td><td><b>delegating</b> (uỷ quyền)</td><td>giữ hết việc/quyền vs. giao việc cho cấp dưới</td></tr>
+      <tr><td>directive (chỉ đạo)</td><td><b>collaborative</b> (hợp tác)</td><td>ra lệnh vs. cùng làm</td></tr>
+      <tr><td>empowering (trao quyền)</td><td><b>controlling</b> (kiểm soát)</td><td>cho nhân viên tự quyết vs. kiểm soát chặt</td></tr>
+      <tr><td>hands-on (sát sao)</td><td><b>laissez-faire</b> (để mặc)</td><td>can thiệp trực tiếp vs. để nhân viên tự làm</td></tr>
+      <tr><td>task-orientated (hướng công việc)</td><td><b>people-orientated</b> (hướng con người)</td><td>ưu tiên kết quả vs. ưu tiên con người</td></tr></table>`},
+    { h: "4. Thuyết X và Thuyết Y (McGregor) – bài nghe Laurie Mullins",
+      body: `<ul><li><b>Theory X</b>: con người lười, phải bị <b>direction and control</b> (chỉ đạo, kiểm soát) qua hệ thống <b>authoritarian</b> (độc đoán), tổ chức chính thức (formal organization structure), <b>close supervision</b> (giám sát chặt).</li>
+      <li><b>Theory Y</b>: hoà hợp mục tiêu <b>individual</b> (cá nhân) và <b>organizational</b> (tổ chức); nhân viên <b>committed</b> (tận tâm) sẽ tự định hướng (<b>self-direction</b>) và tự kiểm soát (<b>self-control</b>).</li></ul>`},
+    { h: "5. Lãnh đạo hiện đại (Further reading)",
+      body: `<ul><li><b>Charisma</b>: sức hút khiến người khác ngưỡng mộ, đi theo ⇒ lãnh đạo <b>visionary</b> (có tầm nhìn).</li>
+      <li><b>Management by consensus</b> (quản lý đồng thuận – phổ biến ở châu Á): không áp đặt <b>top-down</b> mà qua <b>consultation</b> (tham vấn).</li>
+      <li><b>Coaching and mentoring</b>: quản lý cấp cao kèm cặp người kế nhiệm (grooming).</li>
+      <li><b>Empowerment</b>: nhân viên được quyền dùng sáng kiến (initiative), tự quyết định ⇒ phi tập trung, bớt quan liêu. Liên quan <b>delegation</b> (giao trách nhiệm). Rủi ro: mất kiểm soát.</li>
+      <li>Nhân viên sở hữu cổ phần ⇒ có động lực, gắn bó hơn.</li></ul>`}
+  ],
+  readings: [
+    { t: "Student A – Anna Wintour (Vogue)", s: `<p>Người phụ nữ quyền lực nhất ngành thời trang. Tự nhận: rất <b>driven</b>, <b>competitive</b>, có thể là <b>perfectionist</b>. Tham gia mọi chi tiết của tạp chí; <b>decisive</b> (quyết đoán), thiếu kiên nhẫn. "Tạp chí không phải nền dân chủ" – quyết định cuối cùng là của bà. Đồng nghiệp: bà <b>intimidating</b> (đáng sợ), không thể hiện cảm xúc, không dễ tiếp cận (văn phòng rất xa cửa – cố ý).</p>`},
+    { t: "Student B – Jim Buckmaster (Craigslist)", s: `<p>Không khí văn phòng ấm cúng, phi doanh nghiệp, không dress code. Ông có tư duy <b>anti-authoritarian</b>: không bảo nhân viên làm gì, khi nào đến; <b>không đặt deadline</b> nhân tạo (gây stress). Có cấp bậc nhưng quyền lực chỉ dùng như phương án cuối cùng. Tuyển người <b>talented</b> và <b>self-motivated</b> rồi để họ tự làm. Hầu như mọi cuộc họp đều vô ích.</p>`}
+  ],
+  exercises: [
+    { id: "u5e1", type: "fill", title: "Vocabulary – Ex.1: Opposite adjective + noun form",
+      intro: "Ô 1: tính từ trái nghĩa (in-, ir-, un-, il-, dis-). Ô 2: danh từ của tính từ gốc.",
+      items: [
+        { q: "1 considerate", a: ["inconsiderate", "consideration"] },
+        { q: "2 competent", a: ["incompetent", "competence|competency"] },
+        { q: "3 creative", a: ["uncreative", "creativity"] },
+        { q: "4 diplomatic", a: ["undiplomatic", "diplomacy"] },
+        { q: "5 efficient", a: ["inefficient", "efficiency"] },
+        { q: "6 flexible", a: ["inflexible", "flexibility"] },
+        { q: "7 inspiring", a: ["uninspiring", "inspiration"] },
+        { q: "8 logical", a: ["illogical", "logic"], ex: "il- trước chữ l." },
+        { q: "9 loyal", a: ["disloyal", "loyalty"] },
+        { q: "10 organised", a: ["disorganised|disorganized", "organisation|organization"] },
+        { q: "11 decisive", a: ["indecisive", "decision|decisiveness"] },
+        { q: "12 responsible", a: ["irresponsible", "responsibility"], ex: "ir- trước chữ r." },
+        { q: "13 sociable", a: ["unsociable", "sociability"] },
+        { q: "14 supportive", a: ["unsupportive", "support"] }
+      ]},
+    { id: "u5e2", type: "match", title: "Vocabulary – Ex.3: Match pairs of contrasting management styles",
+      items: [
+        { l: "1 autocratic", r: "d) democratic" }, { l: "2 centralizing", r: "c) delegating" },
+        { l: "3 directive", r: "a) collaborative" }, { l: "4 empowering", r: "b) controlling" },
+        { l: "5 hands-on", r: "f) laissez-faire" }, { l: "6 task-orientated", r: "e) people-orientated" }
+      ]},
+    { id: "u5e3", type: "fill", title: "Listening ▶ U5.2 – Complete the extracts (Theory X / Theory Y)",
+      intro: "Dựa trên Thuyết X/Y của McGregor mà tác giả Laurie Mullins trình bày.",
+      items: [
+        { q: "Some managers believe in the need for ___(1)", a: ["direction"] },
+        { q: "…and control through an ___(2) system of central control", a: ["authoritarian"] },
+        { q: "formal organization ___(3)", a: ["structure"] },
+        { q: "systems of ___(4)", a: ["close supervision|supervision"] },
+        { q: "Other managers believe in the integration of ___(5)", a: ["individual"] },
+        { q: "…and ___(6) goals", a: ["organizational|organisational"] },
+        { q: "people can be ___(7) to the goals of the organization", a: ["committed"] },
+        { q: "they will exercise self-___(8)", a: ["direction"] },
+        { q: "and self-___(9)", a: ["control"] }
+      ]},
+    { id: "u5e4", type: "mcq", title: "Reading – Ex.2: Which statements are true for Wintour / Buckmaster?",
+      items: [
+        { q: "1 They think most meetings are a waste of time.", o: ["Wintour", "Buckmaster", "Both", "Neither"], a: 1, ex: "Buckmaster: 'virtually all of them… were kind of useless'." },
+        { q: "2 They are good at making decisions quickly and firmly.", o: ["Wintour", "Buckmaster", "Both", "Neither"], a: 0, ex: "Wintour 'is decisive'; 'the final decision has to be mine'." },
+        { q: "3 They want people to know who is the boss.", o: ["Wintour", "Buckmaster", "Both", "Neither"], a: 0, ex: "'I'm the boss'; 'to give people the sense that she is in charge'. Buckmaster thì không muốn áp đặt quyền lực." },
+        { q: "4 They think artificial deadlines are stressful.", o: ["Wintour", "Buckmaster", "Both", "Neither"], a: 1, ex: "'artificial deadlines… just create stress'." },
+        { q: "5 They believe in hiring the best staff they can.", o: ["Wintour", "Buckmaster", "Both", "Neither"], a: 2, ex: "Wintour: 'I like people who represent the best of what they do'. Buckmaster: 'very careful in hiring people who are talented and self-motivated'." },
+        { q: "6 They think their staff feel happy working there.", o: ["Wintour", "Buckmaster", "Both", "Neither"], a: 1, ex: "Buckmaster: 'people generally feel very good about working there'." }
+      ]},
+    { id: "u5e5", type: "mcq", title: "Reading – Ex.3: Which adjectives describe Anna Wintour?",
+      items: [
+        { q: "approachable", o: ["Yes", "No"], a: 1, ex: "'she enjoys not being completely approachable'." },
+        { q: "demanding", o: ["Yes", "No"], a: 0, ex: "'We work very hard'; she is striving for the best." },
+        { q: "perfectionist", o: ["Yes", "No"], a: 0, ex: "'if that turns you into a perfectionist, then maybe I am'." },
+        { q: "ruthless", o: ["Yes", "No"], a: 0, ex: "Có thể chấp nhận: 'strikes terror in some', 'cold or brusque', 'intimidating'. (Câu hỏi mở – nêu dẫn chứng.)" },
+        { q: "volatile", o: ["Yes", "No"], a: 1, ex: "Bài nói 'She is not a person who's going to show you her emotions ever' ⇒ không phải dễ nổi nóng." }
+      ]},
+    { id: "u5e6", type: "match", title: "Reading – Ex.4: Match the adjectives to the definitions",
+      items: [
+        { l: "1 not caring if you have to harm others to get what you want", r: "ruthless" },
+        { l: "2 not satisfied with anything unless it is exactly right", r: "perfectionist" },
+        { l: "3 having a natural ability to do something well", r: "talented" },
+        { l: "4 wanting to achieve something by themselves", r: "self-motivated" },
+        { l: "5 against forcing people to obey strict rules", r: "anti-authoritarian" },
+        { l: "6 friendly and easy to talk to", r: "approachable" },
+        { l: "7 expecting a lot of time and effort from others", r: "demanding" },
+        { l: "8 liable to suddenly become angry", r: "volatile" }
+      ]},
+    { id: "u5e7", type: "fill", title: "Reading – Ex.5: Complete the paragraph",
+      items: [
+        { q: "the managers were remote and not at all ___(1). They were hard to get to know.", a: ["approachable"] },
+        { q: "The only one who showed any emotion was the CEO, who had a ___(2) temper.", a: ["volatile"] },
+        { q: "He had a ___(3) management style, insisting that everything was exactly right.", a: ["perfectionist"] },
+        { q: "decision-making is open and transparent and the style is ___(4). Management is by consensus.", a: ["anti-authoritarian"] },
+        { q: "All the staff are ___(5) and experts in their own fields.", a: ["talented"] },
+        { q: "They are ___(6) and trusted to work without supervision.", a: ["self-motivated"] }
+      ]},
+    { id: "u5e8", type: "fill", title: "Further reading – Key vocabulary",
+      items: [
+        { q: "A powerful attractive quality that makes people admire and follow a leader: c_______", a: ["charisma"] },
+        { q: "A leader with this quality may be described as a v________.", a: ["visionary"] },
+        { q: "Decisions are arrived at through consultation: management by c________.", a: ["consensus"] },
+        { q: "Giving employees the right to take decisions without asking managers first: e__________.", a: ["empowerment"] },
+        { q: "To give other people responsibility for work rather than doing it all yourself: to d_______.", a: ["delegate"] },
+        { q: "Decisions imposed from above: a t__-d___ approach.", a: ["top-down"] },
+        { q: "Future senior managers are 'groomed' in one-to-one sessions: coaching and m________.", a: ["mentoring"] }
+      ]}
+  ],
+  discussion: [
+    { q: "What is the role of a manager? Choose your top three roles.", model: "For me, the top three roles are leader, motivator and decision-maker. A manager must give direction, keep the team motivated, and make clear decisions on time. These roles are connected to statements like 'be available to give staff advice and support' and 'not ask people to do things they are not prepared to do themselves'." },
+    { q: "Choose the four best and four worst qualities of a manager.", model: "Best: 1 decisive, 2 supportive, 3 competent, 4 inspiring. Worst: 1 irresponsible, 2 disloyal, 3 inconsiderate, 4 indecisive. A good manager must make decisions and support the team; an irresponsible manager damages trust." },
+    { q: "How would you describe your own management style?", model: "I would describe my style as democratic and people-orientated, but hands-on when necessary. I consult my team before important decisions and delegate tasks to empower people, but I monitor results closely. I think I am decisive and organised, but I sometimes need to be more patient." },
+    { q: "Which management style would you like to experience? Wintour's or Buckmaster's?", model: "I would prefer Buckmaster's anti-authoritarian style because it trusts talented, self-motivated people and reduces stress. However, Wintour's demanding, perfectionist style may be necessary in a fast, creative industry where one person must make the final decision." }
+  ]
+});
+
+/* ===================== UNIT 6 ===================== */
+UNITS.push({
+  id: 6, title: "Ethical business", vn: "Kinh doanh có đạo đức",
+  goal: "Hiểu trách nhiệm xã hội doanh nghiệp (CSR), các collocation về đạo đức kinh doanh, danh từ ↔ tính từ, ngôn ngữ sắp xếp kế hoạch và các cách diễn đạt tương lai.",
+  concepts: [
+    { h: "1. Ethical business là gì? (bản chất)",
+      body: `<p>Doanh nghiệp có đạo đức = kiếm lợi nhuận nhưng <b>có trách nhiệm với xã hội và môi trường</b> (Corporate Social Responsibility – CSR):</p>
+      <ul><li><b>act responsibly</b> – hành động có trách nhiệm</li><li><b>comply with regulations</b> – tuân thủ quy định (và làm <i>hơn</i> mức quy định)</li><li><b>reduce the impact</b> on the environment – giảm tác động môi trường</li><li><b>donate time, services, money</b> – quyên góp</li><li><b>take an active part in</b> the community – tham gia tích cực</li><li><b>stay true to its principles</b> – giữ vững nguyên tắc</li><li><b>fair trade</b> – thương mại công bằng (trả giá hợp lý cho nông dân nhỏ)</li></ul>
+      <p>Ví dụ <b>Patagonia</b>: quyên ≥1% doanh thu cho các nhóm môi trường; dùng polyester tái chế và cotton hữu cơ; thừa nhận sản xuất gây ô nhiễm (by-product) nên liên tục giảm tác động.</p>`},
+    { h: "2. Danh từ ↔ Tính từ (đạo đức)",
+      body: `<table class="t"><tr><th>Ethical (tích cực)</th><th>Adj</th><th>Unethical (tiêu cực)</th><th>Adj</th></tr>
+      <tr><td>ethics</td><td>ethical</td><td>bribery (hối lộ)</td><td>–</td></tr>
+      <tr><td>responsibility</td><td>responsible</td><td>deception (lừa dối)</td><td>deceptive</td></tr>
+      <tr><td>fairness</td><td>fair</td><td>corruption (tham nhũng)</td><td>corrupt</td></tr>
+      <tr><td>generosity</td><td>generous</td><td>prejudice (định kiến)</td><td>prejudiced</td></tr>
+      <tr><td>credibility (uy tín)</td><td>credible</td><td>greed (tham lam)</td><td>greedy</td></tr>
+      <tr><td>values</td><td>–</td><td>discrimination (phân biệt đối xử)</td><td>discriminatory</td></tr></table>`},
+    { h: "3. Diễn đạt tương lai – 4 dạng & cách chọn (rất hay thi)",
+      body: `<table class="t"><tr><th>Dạng</th><th>Dùng khi</th><th>Ví dụ</th></tr>
+      <tr><td><b>will</b></td><td>(1) quyết định ngay lúc nói; (4) dự đoán, ý kiến</td><td>OK, I'll let Christina know. / I think Greta will notice a lot of changes.</td></tr>
+      <tr><td><b>be going to</b></td><td>(2) kế hoạch, dự định <u>đã quyết từ trước</u></td><td>We're going to arrange two dates.</td></tr>
+      <tr><td><b>Present continuous</b></td><td>(3) lịch hẹn, sắp xếp cụ thể (có người, giờ, địa điểm)</td><td>I'm meeting Mrs. Brasseler at 3.30.</td></tr>
+      <tr><td><b>Present simple</b></td><td>(5) lịch trình, thời gian biểu cố định</td><td>The flight leaves at 7.15.</td></tr></table>
+      <p class="tip">Mẹo: có "I think / probably / according to the forecast" ⇒ <b>will</b>. Có lịch tàu/xe/máy bay ⇒ <b>present simple</b>. Đã hẹn với ai ⇒ <b>present continuous</b>. Phản ứng tức thì (OK, Of course…) ⇒ <b>will</b>.</p>`},
+    { h: "4. Key expressions – Planning arrangements",
+      body: `<ul><li><b>Explaining plans</b>: We'll email you the (final) itinerary. We're planning to… The idea is to… We're going to arrange… You'll get the opportunity to… The flight leaves on…</li>
+      <li><b>Inviting</b>: We'd like to invite you to… You're welcome to… Alternatively, we'd be delighted to…</li>
+      <li><b>Recommending</b>: We strongly recommend you (stay)… It would be a good idea to… … is highly recommended. It's well worth a visit.</li>
+      <li><b>Responding</b>: That would be great. That sounds really interesting. Good idea. That makes sense. It's just the kind of thing I need. That's not really what I'm looking for.</li></ul>`}
+  ],
+  readings: [
+    { t: "Our reason for being – Patagonia (tóm tắt)", s: `<p>Patagonia khởi nguồn từ công ty nhỏ làm dụng cụ leo núi, nay làm quần áo cho các môn thể thao "im lặng" (không cần động cơ, gắn với thiên nhiên). Giá trị do những người sáng lập yêu thiên nhiên đặt ra ⇒ hành động có trách nhiệm, tích cực sửa chữa tổn hại cho hành tinh. Cam kết bảo vệ đất và nước: quyên góp thời gian, dịch vụ và ít nhất 1% doanh thu. Thừa nhận sản xuất gây ô nhiễm ⇒ liên tục giảm tác động, làm hơn quy định (polyester tái chế, cotton hữu cơ). Hơn 30 năm giữ vững nguyên tắc ⇒ tự hào.</p>`}
+  ],
+  exercises: [
+    { id: "u6e1", type: "match", title: "Vocabulary – Ex.4: Match words in A and B to make phrases",
+      items: [
+        { l: "act", r: "responsibly" }, { l: "share", r: "a strong commitment to" }, { l: "take", r: "an active part in" },
+        { l: "stay", r: "true to its principles" }, { l: "comply with", r: "regulations" }, { l: "reduce", r: "the impact" }, { l: "donate", r: "time" }
+      ]},
+    { id: "u6e2", type: "fill", title: "Vocabulary – Ex.4: Complete questions 1–7 with the phrases",
+      items: [
+        { q: "1 Do most companies in your country always ______ or do they sometimes bend the rules?", a: ["comply with regulations"] },
+        { q: "2 Do you know of any companies that ______, services or money to help local organizations?", a: ["donate time"] },
+        { q: "3 How can businesses ______ they have on the environment?", a: ["reduce the impact"] },
+        { q: "4 Why should a company ______ and deal with any pollution…?", a: ["act responsibly"] },
+        { q: "5 Does your company ______ the life of the local community?", a: ["take an active part in"] },
+        { q: "6 Should a company ______ and values even if this means a loss of profit?", a: ["stay true to its principles"] },
+        { q: "7 What companies in your country ______ protecting the environment?", a: ["share a strong commitment to"] }
+      ]},
+    { id: "u6e3", type: "mcq", title: "Vocabulary – Ex.5: Ethical or unethical company?",
+      items: ["bribery", "ethics", "deception", "responsibility", "fairness", "generosity", "values", "corruption", "prejudice", "credibility", "greed", "discrimination"].map(w => ({
+        q: w, o: ["an ethical company", "an unethical company"],
+        a: ["bribery", "deception", "corruption", "prejudice", "greed", "discrimination"].includes(w) ? 1 : 0
+      }))},
+    { id: "u6e4", type: "fill", title: "Vocabulary – Ex.6: Complete the table with adjectives",
+      items: [
+        { q: "ethics →", a: ["ethical"] }, { q: "responsibility →", a: ["responsible"] }, { q: "corruption →", a: ["corrupt"] },
+        { q: "fairness →", a: ["fair"] }, { q: "prejudice →", a: ["prejudiced"] }, { q: "generosity →", a: ["generous"] },
+        { q: "greed →", a: ["greedy"] }, { q: "credibility →", a: ["credible"] }, { q: "discrimination →", a: ["discriminatory"] }
+      ]},
+    { id: "u6e5", type: "fill", title: "Listening ▶ U6.1 – Ex.3: Phrases for explaining plans",
+      intro: "Đáp án dựa trên hộp Key expressions & phần Language at work (đối chiếu audio nếu có).",
+      items: [
+        { q: "We ______ once you've decided what you'd like to see.", a: ["'ll email you the final itinerary|will email you the final itinerary|'ll email you the itinerary|will email you the itinerary"] },
+        { q: "So, ______ how Hummingbird's operation works in China.", a: ["the idea is to show you|the idea is to"] },
+        { q: "The ______ spend four days at one of the sites where the tea is grown.", a: ["plan is to|idea is to"] },
+        { q: "You ______ accompany the workers in their daily work.", a: ["'ll get the opportunity to|will get the opportunity to"] },
+        { q: "We've looked at all the options, and ______ two dates.", a: ["we're going to arrange|we are going to arrange"], ex: "Câu c trong Language at work." }
+      ]},
+    { id: "u6e6", type: "fill", title: "Listening ▶ U6.2 – Ex.4: Inviting, recommending, responding",
+      intro: "Đáp án dựa trên hộp Key expressions (đối chiếu audio nếu có).",
+      items: [
+        { q: "We ______ watch the tea being prepared.", a: ["'d like to invite you to|would like to invite you to"] },
+        { q: "English isn't spoken so ______ with our guide.", a: ["we strongly recommend you stay|we strongly recommend that you stay"] },
+        { q: "On the subject of language – ______ a project set up to help build a new school.", a: ["you're welcome to visit|you are welcome to visit"] },
+        { q: "That ______ really interesting.", a: ["sounds"] },
+        { q: "… as it ______ travel with our interpreter.", a: ["'d be a good idea to|would be a good idea to"], ex: "Câu e: 'it'd be a good idea to travel with our interpreter'." },
+        { q: "A visit to the site ______.", a: ["is highly recommended"] },
+        { q: "I was there for the first time last month … It's ______.", a: ["well worth a visit"] },
+        { q: "Mmm … ______ I'm looking for.", a: ["that's not really what|that is not really what"] },
+        { q: "Well, alternatively, ______ introduce you to the team…", a: ["we'd be delighted to|we would be delighted to"] },
+        { q: "That would be great – ______.", a: ["it's just the kind of thing i need|it is just the kind of thing i need"] }
+      ]},
+    { id: "u6e7", type: "match", title: "Language at work – Ex.1 & 2: Tenses a–e → situations 1–5",
+      items: [
+        { l: "a She's coming in later this morning to speak with you.", r: "3 appointment or arrangement (present continuous)" },
+        { l: "b This will give you a real insight into their lives.", r: "4 prediction (will)" },
+        { l: "c We've looked at all the options, and we're going to arrange two dates.", r: "2 plan / intention already decided (going to)" },
+        { l: "d The first morning flight leaves at 7.15.", r: "5 timetable or schedule (present simple)" },
+        { l: "e B: That makes sense. We'll speak to our colleagues and let you know.", r: "1 decision as they speak (will)" }
+      ]},
+    { id: "u6e8", type: "mcq", title: "Language at work – Ex.3: Choose the best option",
+      items: [
+        { q: "1 I can't see you on Friday – ___ a training course in London.", o: ["I'll do", "I'm doing"], a: 1, ex: "Sắp xếp đã định ⇒ present continuous." },
+        { q: "2 According to the weather forecast, it ___ hot tomorrow.", o: ["will be", "is being"], a: 0, ex: "Dự đoán ⇒ will." },
+        { q: "3 The next flight to Tokyo ___ there at 10.45 tomorrow morning.", o: ["arrives", "is going to arrive"], a: 0, ex: "Lịch trình ⇒ present simple." },
+        { q: "4 A: I'm out of the office tomorrow. B: Are you? OK, ___ Christina know.", o: ["I'll let", "I'm letting"], a: 0, ex: "Quyết định ngay lúc nói ⇒ will." },
+        { q: "5 I'm not in the office on Monday – ___ to an exhibition.", o: ["I'm going to go", "I'll go"], a: 0, ex: "Kế hoạch đã quyết ⇒ going to." },
+        { q: "6 I ___ Mrs. Brasseler at 3.30 this afternoon.", o: ["meet", "'m meeting"], a: 1, ex: "Cuộc hẹn ⇒ present continuous." },
+        { q: "7 A: Could you give me some information about Mr. Ward's visit? B: Of course, ___ the details now.", o: ["I email", "I'll email"], a: 1, ex: "Đề nghị/quyết định tức thì ⇒ will." },
+        { q: "8 I think Greta ___ a lot of changes in the office when she returns.", o: ["is noticing", "will notice"], a: 1, ex: "'I think' + dự đoán ⇒ will." }
+      ]}
+  ],
+  discussion: [
+    { q: "What effect (positive or negative) can companies have on the environment and the local community?", model: "Positive: they create jobs, pay taxes, support local suppliers and charities, and can invest in clean technology. Negative: they can cause pollution, waste natural resources, damage health and push out small local businesses." },
+    { q: "Hummingbird Teas – option A or B? Advantages and disadvantages.", model: "I would choose option A, the information day on fair trade. Advantages: it explains clearly why and how Hummingbird practises fair trade, and the tea tasting of rare teas is a unique experience. Disadvantages: only ten people per group, so you must arrive early. Option B is more informal and practical (tea-making workshop, slide show on tree replanting), but it is less focused on the ethical story that reporters need." },
+    { q: "Rule 47: Is it a good idea to have a set of personal standards at work? Why might it be difficult not to break them?", model: "Yes. Personal standards help you make decisions when you face an ethical dilemma and protect your reputation. But it can be difficult to keep them because of pressure from managers, targets, competition and the fear of losing your job. 'Your industry stinks' means the industry is very unethical; 'crossing the line' means doing something wrong or unacceptable." },
+    { q: "Write 8–10 personal standards starting with 'We will…' / 'We will not…'.", model: "We will not break the law to further our careers. We will not accept or offer bribes. We will treat all colleagues fairly, without discrimination. We will be honest with customers. We will share our knowledge with colleagues. We will protect confidential information. We will reduce waste and our impact on the environment. We will not take credit for other people's work. We will report unethical behaviour. We will keep a healthy work–life balance." }
+  ]
+});
+
+/* ===================== UNIT 7 ===================== */
+UNITS.push({
+  id: 7, title: "New business", vn: "Khởi nghiệp",
+  goal: "Từ vựng khởi nghiệp & gọi vốn, mô hình pop-up, tính từ gradable/ungradable + trạng từ, cách duy trì quan hệ công việc, hiện tại hoàn thành đơn & tiếp diễn.",
+  concepts: [
+    { h: "1. Từ vựng khởi nghiệp – bản chất",
+      body: `<ul><li><b>would-be entrepreneurs</b>: người muốn khởi nghiệp</li><li><b>gap in the market</b>: khoảng trống thị trường – cơ hội bán thứ chưa có</li><li><b>start-up capital</b>: vốn khởi nghiệp</li><li><b>business model</b>: mô hình kinh doanh (cách DN tạo ra tiền)</li><li><b>financial backing</b>: hậu thuẫn tài chính</li><li><b>investment fund</b>: quỹ đầu tư</li><li><b>venture capitalist</b>: nhà đầu tư mạo hiểm – rót vốn đổi lấy một phần lợi nhuận/cổ phần</li><li><b>return on investment</b>: lợi nhuận trên vốn đầu tư</li><li><b>turn over</b> £100m: có doanh thu £100m</li><li><b>pop-up stall / temporary outlet</b>: quầy/điểm bán tạm thời</li></ul>
+      <p><b>Pop-up</b> hữu ích vì: thử thị trường rẻ (test the market), tạo doanh thu nhanh để có vốn mà không phụ thuộc venture capitalist, gặp khách trực tiếp và thu thập thông tin khách hàng. Nên đặt nơi đông người (trận bóng, hoà nhạc) hoặc thuê cửa hàng trống vài tuần.</p>`},
+    { h: "2. Gradable vs Ungradable adjectives",
+      body: `<table class="t"><tr><th>Loại</th><th>Ví dụ</th><th>Trạng từ đi kèm</th></tr>
+      <tr><td><b>Gradable</b> (có mức độ)</td><td>good, kind, nice, important, expensive, generous, helpful, risky, profitable, difficult</td><td><b>very, extremely, really, quite, a bit</b></td></tr>
+      <tr><td><b>Ungradable</b> (cực hạn)</td><td>perfect, terrible, fantastic, impossible, outrageous, useless, ridiculous, wonderful</td><td><b>absolutely, completely, totally, really</b></td></tr></table>
+      <p class="tip">SAI: <s>very ridiculous</s>, <s>absolutely difficult</s>. ĐÚNG: <b>absolutely ridiculous</b>, <b>extremely difficult</b>. "Really" dùng được cho cả hai.</p>`},
+    { h: "3. Present perfect simple vs continuous",
+      body: `<table class="t"><tr><th>Dạng</th><th>Dùng khi</th><th>Ví dụ</th></tr>
+      <tr><td><b>Simple</b> have/has + V3</td><td>(c) hành động đã <u>hoàn thành, có kết quả</u>; (b) <u>trạng thái</u> từ quá khứ đến nay không đổi (với stative verbs: live, know, be…)</td><td>Our company has awarded a new deal. / She's lived in Brussels for ten years.</td></tr>
+      <tr><td><b>Continuous</b> have/has been + V-ing</td><td>(a) hoạt động <u>kéo dài</u> từ quá khứ, vẫn đang tiếp diễn; (d) nhấn mạnh tính <u>tạm thời</u></td><td>Gil Fryer has been keeping me very busy. / I've been commuting between France and Belgium for six months.</td></tr></table>
+      <p><b>for</b> + khoảng thời gian (for ten years, for six months); <b>since</b> + mốc thời gian (since 2020, since you left GBF).</p>`},
+    { h: "4. Maintaining contacts – mẫu câu",
+      body: `<ul><li>I'm not sure if you remember me. – Không biết anh còn nhớ tôi không.</li><li>I haven't seen you for ages. – Lâu lắm rồi không gặp.</li><li>What have you been doing? – Dạo này làm gì?</li><li>How's work? – Công việc thế nào?</li><li>It's good to hear from you. – Rất vui được nghe tin anh.</li><li>That's actually the reason why I'm calling. – Đó chính là lý do tôi gọi.</li><li>The thing is, I'm looking for someone to work with us… – Chuyện là…</li><li>I'll certainly think about it. – Tôi chắc chắn sẽ cân nhắc.</li></ul>`}
+  ],
+  readings: [
+    { t: "Start-ups with pop-ups (tóm tắt)", s: `<p>Năm 1999, 3 người bạn thấy khoảng trống trên thị trường đồ uống, bỏ 6 tháng và £500 làm sinh tố, bán ở quầy pop-up tại lễ hội âm nhạc. Khách bỏ cốc vào thùng "Yes"/"No" trả lời câu hỏi "có nên bỏ việc để làm sinh tố?" – "Yes" thắng ⇒ thương hiệu <b>Innocent</b> ra đời. Nay doanh thu £100m/năm, 275 nhân viên; Coca-Cola mua lại 2013 (≥90%). Ba nhà sáng lập lập quỹ "Jam Jar Investments" hỗ trợ tài chính cho DN mới. Pop-up = điểm bán tạm thời (xe burger, quầy chợ) – cách rẻ để thử thị trường, tạo doanh thu nhanh, không phụ thuộc venture capitalist; nên đặt nơi đông người.</p>`}
+  ],
+  exercises: [
+    { id: "u7e1", type: "open", title: "Reading – Ex.3: Answer questions 1–4",
+      items: [
+        { q: "1 How did the founders of Innocent get customer feedback on their smoothies?", model: "They asked customers to throw their empty cups into bins marked 'Yes' or 'No' under a sign asking 'Should we give up our jobs to make these smoothies?'" },
+        { q: "2 Nowadays, how do the founders help other new businesses?", model: "They have set up an investment fund called 'Jam Jar Investments' to give financial backing to new businesses." },
+        { q: "3 How does a pop-up reduce a new business's costs?", model: "It is a cheap way to test the market, and it can generate quick sales to help with start-up capital without relying on investment from a venture capitalist." },
+        { q: "4 What advice does the article give about where to locate a pop-up?", model: "Anywhere with crowds, such as football matches or rock concerts, or rent an empty shop on a high street for a few weeks." }
+      ]},
+    { id: "u7e2", type: "match", title: "Reading – Ex.5: Match the words in bold to definitions 1–11",
+      items: [
+        { l: "1 money to help and support someone's business", r: "financial backing" },
+        { l: "2 money to set up a business", r: "start-up capital" },
+        { l: "3 a place to sell something for a short period of time", r: "pop-up stall" },
+        { l: "4 people who would like to try and start their own business", r: "would-be entrepreneurs" },
+        { l: "5 the way a business operates to make money", r: "business model" },
+        { l: "6 an amount of money from people who will invest in a business", r: "investment fund" },
+        { l: "7 to do business worth a particular amount of money", r: "turn over" },
+        { l: "8 opportunity to sell something not yet available", r: "gap in the market" },
+        { l: "9 temporary place to sell your products", r: "temporary outlet" },
+        { l: "10 someone investing in a business in return for part of its profits", r: "venture capitalist" },
+        { l: "11 profit from putting money into a business", r: "return on investment" }
+      ]},
+    { id: "u7e3", type: "fill", title: "Reading – Ex.6: Complete the advice about funding a start-up",
+      items: [
+        { q: "For any would-be ___(1), the first challenge…", a: ["entrepreneur|entrepreneurs"] },
+        { q: "…is to spot a gap in the ___(2).", a: ["market"] },
+        { q: "…raise enough start-up ___(3) to set up the business.", a: ["capital"] },
+        { q: "…if you can show you have a good business ___(4) for the operation of your business", a: ["model"] },
+        { q: "Another option is to get support from an investment ___(5).", a: ["fund"] },
+        { q: "By working with investors, you get the financial ___(6) you need", a: ["backing"] },
+        { q: "…consider doing a pop-up by renting a temporary ___(7) during a busy event.", a: ["outlet"] },
+        { q: "…may even get a useful return on your ___(8).", a: ["investment"] }
+      ]},
+    { id: "u7e4", type: "mcq", title: "Tip – Gradable / ungradable adjectives: choose the correct adverb",
+      items: [
+        { q: "It's ___ ridiculous that the bank won't lend us any money!", o: ["absolutely", "very"], a: 0, ex: "ridiculous là ungradable ⇒ absolutely." },
+        { q: "Starting a business is ___ risky.", o: ["absolutely", "extremely"], a: 1, ex: "risky là gradable ⇒ extremely/very." },
+        { q: "Losing €50,000 a week is ___ terrible!", o: ["absolutely", "very"], a: 0 },
+        { q: "Our investors have been ___ helpful.", o: ["completely", "really"], a: 1, ex: "helpful gradable ⇒ really/very." },
+        { q: "An 80% share? That's ___ outrageous!", o: ["totally", "a bit"], a: 0 },
+        { q: "Working for yourself is ___ difficult at first.", o: ["absolutely", "quite"], a: 1 },
+        { q: "Being nominated for the award is ___ wonderful news!", o: ["absolutely", "very"], a: 0 }
+      ]},
+    { id: "u7e5", type: "open", title: "Ex.7: Respond to the statements using adverbs + adjectives",
+      items: [
+        { q: "1 The bank has refused to give us a loan.", model: "That's absolutely terrible! / It's really ridiculous – your business plan is excellent." },
+        { q: "2 What's it like working for yourself?", model: "It's extremely difficult at times, but absolutely wonderful when things go well." },
+        { q: "3 I've just been nominated for the 'Entrepreneur of the Year' award.", model: "That's absolutely fantastic! Congratulations!" },
+        { q: "4 Our business start-up is losing €50,000 a week.", model: "That's absolutely terrible – it's very risky to continue like that." },
+        { q: "5 The investors wanted an 80% share of my new business in return for the money.", model: "That's completely outrageous! / That's absolutely ridiculous!" }
+      ]},
+    { id: "u7e6", type: "match", title: "Business communication – Ex.4: Match 1–8 to a–h",
+      items: [
+        { l: "1 I'm not sure …", r: "h if you remember me." }, { l: "2 I haven't …", r: "e seen you for ages." },
+        { l: "3 What have …", r: "f you been doing?" }, { l: "4 How's …", r: "a work?" },
+        { l: "5 It's good to …", r: "g hear from you." }, { l: "6 That's actually …", r: "c the reason why I'm calling." },
+        { l: "7 The thing is, I'm …", r: "b looking for someone to work with us …" }, { l: "8 I'll certainly …", r: "d think about it." }
+      ]},
+    { id: "u7e7", type: "mcq", title: "Language at work – Ex.1 & Language point: Present perfect",
+      items: [
+        { q: "1 'Our company has awarded a major new deal with Mobelitec.' – tense?", o: ["Present perfect simple", "Present perfect continuous"], a: 0 },
+        { q: "2 'Gil Fryer has been keeping me very busy.' – tense?", o: ["Present perfect simple", "Present perfect continuous"], a: 1 },
+        { q: "3 'Since you left GBF, life's been extremely hectic.' – tense?", o: ["Present perfect simple", "Present perfect continuous"], a: 0, ex: "life's been = life has been (động từ be ⇒ simple)." },
+        { q: "4 'For the last six months, I've been commuting between France and Belgium.' – tense?", o: ["Present perfect simple", "Present perfect continuous"], a: 1 },
+        { q: "5 'She's lived in Brussels for ten years.' – tense?", o: ["Present perfect simple", "Present perfect continuous"], a: 0 },
+        { q: "a A continuous activity that started in the past and is still going on = sentence…", o: ["1", "2", "3"], a: 1, ex: "Gil Fryer has been keeping me very busy." },
+        { q: "b A state that started in the past and is unchanged = sentence…", o: ["1", "2", "3"], a: 2, ex: "life's been extremely hectic." },
+        { q: "c A finished activity with an end result = sentence…", o: ["1", "2", "3"], a: 0, ex: "has awarded a major new deal." },
+        { q: "d Which tense (sentence 4 or 5) suggests something is temporary?", o: ["Sentence 4 – present perfect continuous", "Sentence 5 – present perfect simple"], a: 0, ex: "I've been commuting (tạm thời) vs She's lived (lâu dài, ổn định)." },
+        { q: "e Difference between 'for' and 'since'?", o: ["for + a period of time; since + a point in time", "for + a point in time; since + a period of time", "No difference"], a: 0 }
+      ]},
+    { id: "u7e8", type: "fill", title: "Luyện thêm: Present perfect simple or continuous?",
+      items: [
+        { q: "I ______ (wait) for your email all morning.", a: ["have been waiting|'ve been waiting"] },
+        { q: "We ______ (sign) three new contracts this year.", a: ["have signed|'ve signed"], ex: "Kết quả, số lượng ⇒ simple." },
+        { q: "She ______ (know) the CEO since 2015.", a: ["has known|'s known"], ex: "know là stative verb ⇒ không dùng continuous." },
+        { q: "They ______ (work) on the business plan for weeks.", a: ["have been working|'ve been working"] },
+        { q: "I've just ______ (finish) the report.", a: ["finished"] }
+      ]}
+  ],
+  discussion: [
+    { q: "Why do people start their own business? What makes a successful entrepreneur?", model: "People start their own business to be independent, to follow a passion, to make more money or because they see a gap in the market. A successful entrepreneur is creative, self-motivated, willing to take risks, resilient after failure and good at building networks." },
+    { q: "Would the idea of a pop-up work in your business? Why / Why not?", model: "Yes, I think a pop-up would work for consumer products such as food, drinks or fashion, because it is a cheap way to test the market and meet customers face-to-face. It would not work well for B2B services or products that need long sales cycles." }
+  ]
+});
+
+/* ===================== UNIT 8 ===================== */
+UNITS.push({
+  id: 8, title: "Culture", vn: "Văn hoá trong kinh doanh",
+  goal: "Hiểu các khía cạnh văn hoá theo Hofstede, từ vựng mô tả văn hoá, tính từ + giới từ, kể chuyện quá khứ (narrative tenses) và các cụm nối khi kể sự việc.",
+  concepts: [
+    { h: "1. Mô hình văn hoá Hofstede (theo bài đọc) – 4 cặp yếu tố",
+      body: `<p>Giáo sư Geert Hofstede (Hà Lan) nghiên cứu giá trị nơi làm việc từ dữ liệu nhân viên IBM ở 74 quốc gia/vùng. So sánh các yếu tố văn hoá giúp <b>dự đoán khó khăn</b> khi làm việc xuyên văn hoá.</p>
+      <table class="t"><tr><th>Cặp</th><th>Đặc điểm</th><th>Ví dụ</th></tr>
+      <tr><td><b>Hierarchical</b> vs <b>Egalitarian</b></td><td>Thứ bậc: tôn trọng quyền lực, quan hệ <b>formal</b> với sếp, ít nhận trách nhiệm. Bình đẳng: <b>liberal</b>, sếp giao trách nhiệm, giao lưu với nhân viên.</td><td>Malaysia, Indonesia vs Australia, Denmark</td></tr>
+      <tr><td><b>Individualistic</b> vs <b>Collectivist</b></td><td>Cá nhân: quyền cá nhân, tự do ngôn luận, mục tiêu cá nhân. Tập thể: nhóm/gia đình quan trọng hơn cả kinh doanh, khen thưởng theo nhóm.</td><td>USA, Netherlands vs Korea, Colombia</td></tr>
+      <tr><td><b>Masculine</b> vs <b>Feminine</b></td><td>Nam tính: cạnh tranh, quyết đoán, tích luỹ của cải, "live to work", nghỉ ngắn. Nữ tính: gia đình, quan hệ, chất lượng sống, đàm phán, "work to live", nghỉ dài, giờ linh hoạt.</td><td>Brazil, Mexico vs Sweden, Finland</td></tr>
+      <tr><td><b>Cautious</b> vs <b>Risk-taking</b></td><td>Thận trọng: lịch sử lâu, tôn giáo, chống ý tưởng mới, theo luật <b>strict</b>. Chấp nhận rủi ro: lịch sử trẻ, <b>open</b> với ý tưởng mới, <b>accepting</b> of change.</td><td>Greece, Portugal vs Jamaica, Singapore</td></tr></table>
+      <p class="tip">"When in Rome, do as the Romans do" = Nhập gia tuỳ tục.</p>`},
+    { h: "2. Tính từ + giới từ (dependent prepositions) – hay thi",
+      body: `<ul><li><b>sensitive to</b> sb's feelings – nhạy cảm với</li><li><b>adjust to</b> – thích nghi với (động từ)</li><li><b>familiar with</b> – quen thuộc với</li><li><b>aware of</b> – nhận thức được</li><li><b>respectful of</b> – tôn trọng</li><li><b>informed about</b> – được thông tin về</li><li><b>used to</b> + V-ing/N – quen với</li><li><b>tolerant of</b> – khoan dung với</li></ul>`},
+    { h: "3. Narrative tenses – Thì kể chuyện",
+      body: `<table class="t"><tr><th>Thì</th><th>Dùng để</th><th>Ví dụ</th></tr>
+      <tr><td><b>Past continuous</b> (was/were + V-ing)</td><td>Bối cảnh mở đầu câu chuyện; hành động đang diễn ra thì bị hành động khác xen vào</td><td>It was raining hard… / While he was standing there, another motorist saw him.</td></tr>
+      <tr><td><b>Past simple</b></td><td>Các hành động, sự kiện chính nối tiếp</td><td>The car got a flat tyre, and the chauffeur pulled over.</td></tr>
+      <tr><td><b>Past perfect</b> (had + V3)</td><td>Hành động xảy ra TRƯỚC một hành động quá khứ khác</td><td>He realized that he had left the tool kit behind.</td></tr></table>`},
+    { h: "4. Cụm từ nối khi kể sự việc (critical incidents)",
+      body: `<ul><li><b>As time went by</b> – thời gian trôi qua</li><li><b>That was when</b> – đó là lúc</li><li><b>It wasn't until … that</b> – mãi đến khi … mới</li><li><b>But then</b> – nhưng rồi</li><li><b>In the end</b> – cuối cùng</li><li><b>So that was</b> – vậy là</li><li><b>So what</b> (did you do)? – thế rồi (anh làm gì)?</li><li><b>because of / due to</b> + N – vì</li><li><b>It came about</b> – chuyện xảy ra (là do)</li></ul>
+      <p><b>Critical incident</b> = tình huống giao tiếp gây khó hiểu/hiểu lầm (lỗi ngôn ngữ, faux pas văn hoá), làm lộ ra khác biệt niềm tin, giá trị văn hoá.</p>`}
+  ],
+  readings: [
+    { t: "Working across cultures (tóm tắt)", s: `<p>Làm việc, tiếp khách, đàm phán với đồng nghiệp khác văn hoá có thể khó; một hiểu lầm có thể phá hỏng nhiều tháng làm việc. Theo Hofstede, so sánh các yếu tố văn hoá của mình với văn hoá khác giúp dự đoán khó khăn. Bốn cặp yếu tố: Hierarchical/Egalitarian; Individualistic/Collectivist; Masculine/Feminine; Cautious/Risk-taking (xem phần Bản chất).</p>`},
+    { t: "Story – The billionaire and the motorist (tóm tắt)", s: `<p>Một tối tháng 12, tỷ phú Mỹ được chở trên cao tốc New Jersey trời mưa to. Xe bị xẹp lốp; tài xế phát hiện <b>đã để quên</b> bộ đồ nghề. Một người lái xe đi ngang dừng lại giúp thay bánh. Tỷ phú hỏi có thể cảm ơn thế nào – người đàn ông nói vợ anh có lẽ thích một bó hoa nhỏ. Hai tuần sau, bó hoa đến nhà kèm lời nhắn: toàn bộ khoản vay mua nhà của anh <b>đã được trả hết</b>.</p>`}
+  ],
+  exercises: [
+    { id: "u8e1", type: "mcq", title: "Reading – Ex.2: According to Hofstede, which cultures…?",
+      items: [
+        { q: "1 think family life is important", o: ["Collectivist (Korea, Colombia) and feminine (Sweden, Finland) cultures", "Individualistic cultures (USA, Netherlands)", "Masculine cultures (Brazil, Mexico)"], a: 0, ex: "Collectivist: 'The group, such as the family, has a big influence…'. Feminine: 'family, personal relationships, and quality of life are more important'." },
+        { q: "2 like to be very polite to their manager and/or follow rules and regulations", o: ["Hierarchical (Malaysia, Indonesia) and cautious (Greece, Portugal) cultures", "Egalitarian cultures (Australia, Denmark)", "Risk-taking cultures (Jamaica, Singapore)"], a: 0, ex: "Hierarchical: 'respect authority… formal relationship with their manager'. Cautious: 'prefer to follow strict rules'." },
+        { q: "3 adapt easily to change", o: ["Risk-taking cultures (Jamaica, Singapore)", "Cautious cultures (Greece, Portugal)", "Hierarchical cultures"], a: 0, ex: "'more open to new ideas, and are more accepting of change'." }
+      ]},
+    { id: "u8e2", type: "match", title: "Reading – Ex.4: Match the adjectives in bold to definitions",
+      intro: "Lưu ý: trong bản tài liệu này không có từ in đậm nào nghĩa 'calm' (định nghĩa 3) – có thể do bản gốc khác; nếu đề thi có, đáp án thường là 'reserved/relaxed'.",
+      items: [
+        { l: "1 very polite", r: "formal" },
+        { l: "2 organized in levels", r: "hierarchical" },
+        { l: "4 careful", r: "cautious" },
+        { l: "5 receptive of new ideas", r: "open" },
+        { l: "6 allowing freedom", r: "liberal" },
+        { l: "7 shared by all the group", r: "collectivist" },
+        { l: "8 something which must be obeyed", r: "strict" },
+        { l: "9 willing to tolerate something", r: "accepting" },
+        { l: "10 focusing on one person", r: "individualistic" }
+      ]},
+    { id: "u8e3", type: "fill", title: "Vocabulary – Ex.5: Complete sentences 1–8",
+      intro: "Từ: aware, sensitive, familiar, respectful, tolerant, informed, adjust, used",
+      items: [
+        { q: "1 People from Finland don't like to offend other people, so they're always very ______ to their guests' feelings.", a: ["sensitive"] },
+        { q: "2 I found it quite hard to ______ to the hierarchical culture in Thailand.", a: ["adjust"] },
+        { q: "3 I wasn't very ______ with the way business is done in Romania…", a: ["familiar"] },
+        { q: "4 I wasn't ______ of the custom of greeting the oldest person first in China…", a: ["aware"] },
+        { q: "5 Mexico is a hierarchical culture, so it's important to be ______ of people of a higher rank.", a: ["respectful"] },
+        { q: "6 …so I was ______ about business etiquette in Brazil before I was seconded there.", a: ["informed"] },
+        { q: "7 I'm ______ to people being direct in my own country…", a: ["used"] },
+        { q: "8 …so he wasn't very ______ of the Greek custom of arriving late for dinner!", a: ["tolerant"] }
+      ]},
+    { id: "u8e4", type: "mcq", title: "Listening – Ex.1: Which situations are mentioned in the critical incidents?",
+      intro: "Suy từ các câu ở Ex.2 (incident 1: đội Hàn Quốc nói 'yes' vì tôn trọng cấp bậc; incident 2: chất vấn người có thẩm quyền).",
+      items: [
+        { q: "Critical incident 1 (Korean team) mentions…", o: ["3 importance of seniority and titles & 5 saying 'yes' to avoid loss of face", "1 punctuality & 4 small talk", "2 questioning an authority figure & 1 punctuality"], a: 0, ex: "'My team didn't want to refuse my request because of respect for my seniority.'" },
+        { q: "Critical incident 2 mentions…", o: ["2 questioning an authority figure (+ lack of information)", "1 importance of punctuality only", "4 small talk before meetings only"], a: 0, ex: "'…authority figure. So that was the first problem solved.'" }
+      ]},
+    { id: "u8e5", type: "fill", title: "Listening – Ex.2: Complete sentences 1–10 with the phrases",
+      intro: "Phrases: in the end, that's, but then, it came about, because of, as time went by, so that was, it wasn't until, due to, so what, that was when",
+      items: [
+        { q: "1 … for years. ______, I noticed that things weren't being done that I'd requested …", a: ["as time went by"] },
+        { q: "2 … it wasn't done. ______ I was aware we had a problem.", a: ["that was when"] },
+        { q: "3 Well, ______ understandable.", a: ["that's"] },
+        { q: "4 And ______ I talked to a Korean friend that I realized what was wrong.", a: ["it wasn't until"], ex: "Cấu trúc: It wasn't until … that … (mãi đến khi … mới …)." },
+        { q: "5 My team didn't want to refuse my request ______ respect for my seniority.", a: ["because of|due to"] },
+        { q: "6 Yes … ______ I realized they hadn't actually told him this.", a: ["but then"] },
+        { q: "7 … authority figure. ______ the first problem solved.", a: ["so that was"] },
+        { q: "8 ______ did you do?", a: ["so what"] },
+        { q: "9 Well, ______ I asked Anna, a Polish colleague.", a: ["in the end"] },
+        { q: "10 Yes. ______ the lack of information about why we were questioning them.", a: ["it came about due to|it came about because of"], ex: "11 cụm cho 10 chỗ trống ⇒ câu 10 dùng 2 cụm: It came about + due to." }
+      ]},
+    { id: "u8e6", type: "fill", title: "Language at work – Ex.2: Number events a–i in the order they happened (1–9)",
+      intro: "Thứ tự xảy ra THỰC TẾ (không phải thứ tự kể).",
+      items: [
+        { q: "e The chauffeur didn't put the tool kit in the boot.", a: ["1"], ex: "Past perfect 'had left the tool kit behind' ⇒ xảy ra trước khi khởi hành." },
+        { q: "c The billionaire set off down the motorway.", a: ["2"] },
+        { q: "b The car had a flat tyre.", a: ["3"] },
+        { q: "d The chauffeur realized he couldn't change the wheel.", a: ["4"] },
+        { q: "g A passing motorist stopped to help.", a: ["5"] },
+        { q: "a The chauffeur and the motorist changed the wheel.", a: ["6"] },
+        { q: "i The billionaire spoke to the man.", a: ["7"] },
+        { q: "f The billionaire paid off the man's mortgage.", a: ["8"], ex: "'his mortgage had been paid off' (past perfect) ⇒ trước khi hoa đến." },
+        { q: "h Some flowers arrived at the man's house.", a: ["9"] }
+      ]},
+    { id: "u8e7", type: "fill", title: "Language point – Complete the explanations",
+      items: [
+        { q: "Use the ______ to describe background information at the beginning of the story.", a: ["past continuous"], ex: "'an American billionaire was being driven… It was raining hard'" },
+        { q: "Use the ______ to describe the main actions and events in the story.", a: ["past simple"] },
+        { q: "Use the ______ to talk about an action in progress, interrupted by another action.", a: ["past continuous"], ex: "'While he was standing there… another motorist saw him'" },
+        { q: "Use the ______ to talk about an action that happened before another past action.", a: ["past perfect"], ex: "'he realized that he had left the tool kit behind'" }
+      ]},
+    { id: "u8e8", type: "fill", title: "Language at work – Ex.4: Correct form of the verbs",
+      items: [
+        { q: "1 They cancelled my flight because it ______ (snow) so I ______ (sleep) in the airport lounge.", a: ["was snowing", "slept"] },
+        { q: "2 I didn't want to interrupt my colleague while he ______ (talk) on the phone so I ______ (send) him an email instead.", a: ["was talking", "sent"] },
+        { q: "3 I felt very embarrassed when I realized that I ______ (forget) my host's name, so I ______ (apologize) quickly.", a: ["had forgotten", "apologized|apologised"] },
+        { q: "4 During the time I ______ (stay) in Denmark, I didn't know whether to arrive on time so I ______ (decide) to arrive five minutes late.", a: ["was staying", "decided"] },
+        { q: "5 My host offered me a small gift just as I ______ (leave) for the airport and I ______ (give) her a souvenir.", a: ["was leaving", "gave"] },
+        { q: "6 I didn't know if the party was formal or informal because I ______ (lose) my invitation, so I ______ (wear) a smart outfit.", a: ["had lost", "wore"] }
+      ]}
+  ],
+  discussion: [
+    { q: "What does 'When in Rome, do as the Romans do' mean?", model: "It means that when you visit another country or culture, you should follow its customs and behave like the local people. In Vietnamese: 'Nhập gia tuỳ tục'." },
+    { q: "Which of Hofstede's key factors describe your culture?", model: "Vietnamese culture is quite hierarchical: we respect age, seniority and titles, and the relationship with managers is formal. It is also collectivist – family and the group are very important, and harmony and 'face' matter. It is fairly cautious, but younger people are becoming more open to new ideas and change." },
+    { q: "Tell a critical incident (cultural misunderstanding) using narrative tenses.", model: "A few years ago, I was working with a Dutch partner. During our first meeting, he asked very direct questions and openly disagreed with my manager. At first I felt embarrassed because in Vietnam we rarely question an authority figure in public. It wasn't until I talked to a colleague who had lived in the Netherlands that I realized it was normal and not rude there. In the end, we built a very good relationship." }
+  ]
+});
+
+</script>
+<script>
+/* [word, part of speech, nghĩa tiếng Việt, definition / example (EN), unit] */
+window.VOCAB_RAW = [
+// ---------- Unit 1 ----------
+["economic indicator","n","chỉ số kinh tế","A figure that shows how an economy is performing, e.g. GDP or inflation.",1],
+["population","n","dân số","the number of people who live in a country",1],
+["gross domestic product (GDP)","n","tổng sản phẩm quốc nội","the monetary value of all finished goods and services produced within a country's borders",1],
+["gross national product (GNP)","n","tổng sản phẩm quốc dân","the value of goods and services produced in one year by a country's nationals",1],
+["growth rate","n","tốc độ tăng trưởng","the rate of expansion in the economy",1],
+["inflation","n","lạm phát","the movement (rise) of prices in the economy",1],
+["interest rate","n","lãi suất","the cost of borrowing money, as an annual percentage of a loan",1],
+["base rate","n","lãi suất cơ bản","the interest rate set by the Central Bank",1],
+["mortgage rate","n","lãi suất vay mua nhà","the interest rate you pay on a loan for a house or flat",1],
+["mortgage","n","khoản vay thế chấp mua nhà","They took out a mortgage to buy their flat.",1],
+["unemployment rate","n","tỷ lệ thất nghiệp","the percentage of people with no job",1],
+["exchange rate","n","tỷ giá hối đoái","the value of a country's money compared with other currencies",1],
+["balance of trade","n","cán cân thương mại","the difference in value between a country's imports and exports",1],
+["surplus","n","thặng dư","when exports are larger than imports",1],
+["deficit","n","thâm hụt","when exports are lower than imports",1],
+["consumer price index (CPI)","n","chỉ số giá tiêu dùng","measures changes in the prices of a constant basket of goods and services",1],
+["basket of goods","n","rổ hàng hoá","a fixed set of products used to measure price changes",1],
+["borrower","n","người đi vay","High interest rates are bad for borrowers.",1],
+["recession","n","suy thoái kinh tế","a period when the economy shrinks (negative growth)",1],
+["rise (rose, risen)","v","tăng","Exports rose dramatically.",1],
+["increase","v/n","tăng / sự tăng","Inflation increased sharply to 3.4%.",1],
+["go up","v","tăng lên","Mortgage rates went up by 0.5%.",1],
+["fall (fell, fallen)","v","giảm","Unemployment fell slightly.",1],
+["decrease","v/n","giảm / sự giảm","Oil prices decreased.",1],
+["go down","v","giảm xuống","Demand went down sharply.",1],
+["drop","v/n","giảm, rơi","The number of new homes dropped steeply.",1],
+["decline","v/n","suy giảm","The sector is declining.",1],
+["slightly","adv","nhẹ, một chút (thay đổi nhỏ)","Unemployment fell slightly.",1],
+["steadily","adv","đều đặn, liên tục","House prices continue to fall steadily.",1],
+["sharply","adv","mạnh, đột ngột (thay đổi lớn)","Inflation rose sharply.",1],
+["steeply","adv","dốc, mạnh (thay đổi lớn)","Construction dropped steeply.",1],
+["dramatically","adv","rất mạnh, ngoạn mục","Exports rose dramatically.",1],
+["in real terms","phr","tính theo giá trị thực (đã trừ lạm phát)","Family income has doubled in real terms.",1],
+["expenditure","n","chi tiêu","family expenditure on food",1],
+["necessities","n","nhu yếu phẩm","Basic necessities now account for only 15% of the budget.",1],
+["account for","v","chiếm (tỷ lệ)","Housing accounts for 19% of spending.",1],
+["proportion","n","tỷ lệ, phần","the proportion of the budget spent on tobacco",1],
+["luxury","n","hàng xa xỉ","Tobacco and alcohol were the main luxuries.",1],
+// ---------- Unit 2 ----------
+["primary sector","n","khu vực I (khai thác, nông nghiệp)","provides the raw materials and natural resources for industry",2],
+["secondary sector","n","khu vực II (công nghiệp, chế biến)","manufactures finished products",2],
+["service sector","n","khu vực dịch vụ (khu vực III)","provides support activities for customers or other industries",2],
+["raw materials","n","nguyên liệu thô","China suffers from shortages of raw materials.",2],
+["natural resources","n","tài nguyên thiên nhiên","oil, gas, coal, minerals",2],
+["agriculture","n","nông nghiệp","produces basic foods like fruits, vegetables and wheat",2],
+["mining","n","khai khoáng","extracts minerals and material for building",2],
+["oil exploration","n","thăm dò dầu khí","provides basic energy and gas",2],
+["steel production","n","sản xuất thép","a heavy industry",2],
+["textiles and clothing","n","dệt may","a light assembly industry for the fashion market",2],
+["food processing","n","chế biến thực phẩm","a processing industry",2],
+["transportation and logistics","n","vận tải và hậu cần","services to move or store goods",2],
+["advertising","n","quảng cáo","tells customers about products",2],
+["retailing","n","bán lẻ","the sector containing shops where we buy things",2],
+["heavy industry","n","công nghiệp nặng","needs great power and big investment in machinery",2],
+["light industry","n","công nghiệp nhẹ","needs little investment, e.g. clothing",2],
+["manufacturing","n","sản xuất, chế tạo","The manufacturing sector is divided into heavy and light industries.",2],
+["competitive advantage","n","lợi thế cạnh tranh","low labour costs, technology and natural resources",2],
+["emerging economy","n","nền kinh tế mới nổi","China is an emerging economy.",2],
+["developed economy","n","nền kinh tế phát triển","The UK is a developed economy.",2],
+["mechanized","adj","được cơ giới hoá","UK farming is very mechanized.",2],
+["workforce","n","lực lượng lao động","Farming employs only 1% of the workforce.",2],
+["reserves","n","trữ lượng","important reserves of oil, gas and coal",2],
+["added value","n","giá trị gia tăng","high added-value products",2],
+["niche market","n","thị trường ngách","specialist companies with niche markets",2],
+["booming","adj","bùng nổ, phát triển mạnh","The service sector is booming.",2],
+["expertise","n","chuyên môn","the concentration of expertise in the south east",2],
+["infrastructure","n","cơ sở hạ tầng","pressure on road and rail infrastructure",2],
+["intensive (farming)","adj","thâm canh","Farming is very intensive.",2],
+["productivity","n","năng suất","Productivity is achieved by human labour.",2],
+["bureaucracy","n","sự quan liêu","The sector suffers from bureaucracy.",2],
+["shortage","n","sự thiếu hụt","shortages of electric power",2],
+["state sector","n","khu vực nhà nước","old state sector industries",2],
+["underdeveloped","adj","kém phát triển","The service sector is still underdeveloped.",2],
+["living standards","n","mức sống","the rise in living standards",2],
+["wage costs","n","chi phí tiền lương","Wage costs are lower in China.",2],
+["government grant","n","trợ cấp của chính phủ","government support and grants",2],
+["supplier","n","nhà cung cấp","Delivery time from suppliers is shorter.",2],
+["defect","n","lỗi, khuyết tật (sản phẩm)","defect levels per thousand units",2],
+["plant","n","nhà máy","build a new plant in China or the UK",2],
+// ---------- Unit 3 ----------
+["stock market","n","thị trường chứng khoán","a platform to trade shares and raise capital",3],
+["share (UK) / stock (US)","n","cổ phiếu","When you buy a share you become an owner of part of the company.",3],
+["shareholder / stockholder","n","cổ đông","Shareholders vote at the AGM.",3],
+["stock index","n","chỉ số chứng khoán","shows the valuation of a basket of top companies",3],
+["listed company","n","công ty niêm yết","a company whose shares are quoted on a stock market",3],
+["private company","n","công ty tư nhân (không niêm yết)","Its shares are not offered to the public.",3],
+["public company","n","công ty đại chúng","sells shares to the public and is listed",3],
+["raise capital","v","huy động vốn","Companies raise new capital by issuing shares.",3],
+["issue shares","v","phát hành cổ phiếu","The company issued new shares.",3],
+["IPO (Initial Public Offering)","n","phát hành lần đầu ra công chúng","the first time a company offers its shares to the public",3],
+["primary listing","n","niêm yết sơ cấp","the first offer of shares to raise capital",3],
+["secondary market","n","thị trường thứ cấp","where investors buy and sell existing shares",3],
+["investment bank","n","ngân hàng đầu tư","organizes the IPO and underwrites the shares",3],
+["underwrite","v","bảo lãnh phát hành","promise to buy any shares not sold to investors",3],
+["valuation","n","định giá","The bank tests investors' interest to achieve a valuation.",3],
+["fluctuate","v","dao động, biến động","Prices fluctuate according to demand.",3],
+["dividend","n","cổ tức","part of the profit distributed to shareholders",3],
+["capital gain","n","lãi vốn","profit from an increase in the share price when you sell",3],
+["retain (profit)","v","giữ lại (lợi nhuận)","Profit is retained to grow the business.",3],
+["Board of Directors","n","Hội đồng quản trị","decides how much dividend to pay",3],
+["AGM (annual general meeting)","n","đại hội cổ đông thường niên","Shareholders vote at the AGM.",3],
+["market capitalization","n","giá trị vốn hoá thị trường","the total value of a company on the market",3],
+["rights issue","n","phát hành thêm cổ phiếu (quyền mua)","issuing new shares to raise more capital",3],
+["dilution","n","sự pha loãng (cổ phiếu)","each share represents a smaller percentage of the company",3],
+["regulator","n","cơ quan quản lý","the FSA (UK) or the SEC (US)",3],
+["defraud","v","lừa đảo","make sure the company is not trying to defraud investors",3],
+["institutional investor","n","nhà đầu tư tổ chức","pension funds, mutual funds, hedge funds",3],
+["retail investor","n","nhà đầu tư cá nhân/nhỏ lẻ","ordinary people who invest",3],
+["pension fund","n","quỹ hưu trí","one of the biggest institutional investors",3],
+["mutual fund","n","quỹ tương hỗ","a fund in which a manager invests for many people",3],
+["hedge fund","n","quỹ phòng hộ","a high-risk investment fund",3],
+["fund manager","n","người quản lý quỹ","decides which shares to buy or sell",3],
+["p/e ratio","n","hệ số giá/lợi nhuận","the share price in relation to earnings per share",3],
+["broker","n","người môi giới","Brokers publish regular reports on companies.",3],
+["upgrade / downgrade","v","nâng / hạ hạng (khuyến nghị)","Analysts upgraded the stock.",3],
+["spread your risks","v","phân tán rủi ro","invest in several companies in different sectors",3],
+["exposure","n","mức độ rủi ro, tiếp xúc","reduce your exposure to any one company",3],
+["day trading","n","giao dịch trong ngày","buying and selling quickly",3],
+["margin of safety","n","biên an toàn","buy only when the price is well below real value",3],
+["greedy / fearful","adj","tham lam / sợ hãi","Be fearful when others are greedy.",3],
+// ---------- Unit 4 ----------
+["annual report","n","báo cáo thường niên","Public companies must publish one every year.",4],
+["chairman's statement","n","thư của chủ tịch HĐQT","a quick view of the company's performance",4],
+["outlook","n","triển vọng","shows how confident the board feels about the future",4],
+["corporate governance","n","quản trị doanh nghiệp","the way the company is managed by its board",4],
+["statement of directors' responsibilities","n","báo cáo trách nhiệm của HĐQT","the legal responsibilities of the board in preparing accounts",4],
+["independent auditor's report","n","báo cáo kiểm toán độc lập","the opinion of external auditors on the accuracy of the figures",4],
+["financial statements","n","báo cáo tài chính","balance sheet, income statement, cash flow statement",4],
+["notes to the accounts","n","thuyết minh báo cáo tài chính","show how all the figures were calculated",4],
+["balance sheet","n","bảng cân đối kế toán","shows the value of a company at the end of its financial year",4],
+["income statement","n","báo cáo kết quả kinh doanh","shows the profit or loss",4],
+["cash flow statement","n","báo cáo lưu chuyển tiền tệ","shows money coming in and going out",4],
+["operating profit","n","lợi nhuận hoạt động","profit from the main business activities",4],
+["assets","n","tài sản","everything the company owns",4],
+["fixed assets","n","tài sản cố định","long-term investments like property and machinery",4],
+["current assets","n","tài sản ngắn hạn","stock, debtors and cash",4],
+["stock (accounting, UK)","n","hàng tồn kho","raw materials and components owned by the company",4],
+["debtors","n","khoản phải thu","money owed to the company by customers",4],
+["creditors","n","chủ nợ / khoản phải trả","people the company owes money to, e.g. suppliers",4],
+["liabilities","n","nợ phải trả","all the money the company owes",4],
+["current liabilities","n","nợ ngắn hạn","overdraft and money owed to suppliers",4],
+["long-term liabilities","n","nợ dài hạn","bank loans",4],
+["overdraft","n","khoản thấu chi","The company has an overdraft of £2m.",4],
+["net assets","n","tài sản ròng","total assets minus total liabilities",4],
+["shareholders' funds","n","vốn chủ sở hữu","share capital plus reserves",4],
+["share capital","n","vốn cổ phần","money raised by issuing shares",4],
+["reserves","n","quỹ dự trữ, lợi nhuận giữ lại","Capital and reserves = £11m.",4],
+["disclose","v","công bố, tiết lộ","pressure to disclose more about their activities",4],
+["transparency","n","sự minh bạch","pressure for more transparency",4],
+["a true and fair view","phr","phản ánh trung thực và hợp lý","The auditors confirm the accounts give a true and fair view.",4],
+["skim","v","đọc lướt (lấy ý chính)","Read only the first sentence of each paragraph.",4],
+["scan","v","đọc quét (tìm thông tin cụ thể)","Scan the text to find names, dates and figures.",4],
+["press release","n","thông cáo báo chí","issued to journalists to control what reaches the public",4],
+["catchy headline","n","tiêu đề hấp dẫn","a short headline that attracts attention",4],
+["quotation","n","lời trích dẫn","Include a good quotation in quotation marks.",4],
+["acquisition","n","thương vụ mua lại","They bought 'Best Ticket'.",4],
+["sales revenue","n","doanh thu bán hàng","Sales revenue rose from $500m to $700m.",4],
+["green campaigner","n","nhà hoạt động môi trường","wants to know about environmental impact",4],
+["trade fair","n","hội chợ thương mại","trade fairs and exhibitions",4],
+// ---------- Unit 5 ----------
+["motivator","n","người tạo động lực","A manager should be a good motivator.",5],
+["mediator","n","người hoà giải","solves disagreements between staff",5],
+["role model","n","tấm gương","Managers should be role models.",5],
+["considerate / inconsiderate","adj","chu đáo / thiếu chu đáo","noun: consideration",5],
+["competent / incompetent","adj","có năng lực / kém năng lực","noun: competence",5],
+["diplomatic / undiplomatic","adj","khéo léo / vụng về (giao tiếp)","noun: diplomacy",5],
+["efficient / inefficient","adj","hiệu quả / kém hiệu quả","noun: efficiency",5],
+["flexible / inflexible","adj","linh hoạt / cứng nhắc","noun: flexibility",5],
+["logical / illogical","adj","logic / phi logic","noun: logic",5],
+["loyal / disloyal","adj","trung thành / không trung thành","noun: loyalty",5],
+["decisive / indecisive","adj","quyết đoán / thiếu quyết đoán","noun: decision, decisiveness",5],
+["responsible / irresponsible","adj","có trách nhiệm / vô trách nhiệm","noun: responsibility",5],
+["sociable / unsociable","adj","hoà đồng / khó gần","noun: sociability",5],
+["supportive / unsupportive","adj","hỗ trợ / không hỗ trợ","noun: support",5],
+["autocratic","adj","độc đoán","opposite: democratic",5],
+["democratic","adj","dân chủ","opposite: autocratic",5],
+["centralizing","adj","tập trung quyền lực","opposite: delegating",5],
+["delegate","v","uỷ quyền, giao việc","give other people responsibility for work",5],
+["directive","adj","mang tính chỉ đạo","opposite: collaborative",5],
+["collaborative","adj","hợp tác","opposite: directive",5],
+["empowering","adj","trao quyền","opposite: controlling",5],
+["empowerment","n","sự trao quyền","employees use their own initiative to take decisions",5],
+["hands-on","adj","sát sao, trực tiếp","opposite: laissez-faire",5],
+["laissez-faire","adj","để mặc, không can thiệp","opposite: hands-on",5],
+["task-orientated","adj","hướng nhiệm vụ","opposite: people-orientated",5],
+["people-orientated","adj","hướng con người","opposite: task-orientated",5],
+["authoritarian","adj","độc đoán, chuyên quyền","an authoritarian system of central control",5],
+["anti-authoritarian","adj","chống độc đoán","against forcing people to obey strict rules",5],
+["approachable","adj","dễ gần","friendly and easy to talk to",5],
+["demanding","adj","đòi hỏi cao","expecting a lot of time and effort from others",5],
+["perfectionist","adj/n","người cầu toàn","not satisfied unless everything is exactly right",5],
+["ruthless","adj","tàn nhẫn","not caring if you harm others to get what you want",5],
+["volatile","adj","dễ nổi nóng, thất thường","liable to suddenly become angry",5],
+["talented","adj","tài năng","having a natural ability to do something well",5],
+["self-motivated","adj","tự tạo động lực","wanting to achieve something by themselves",5],
+["intimidating","adj","gây sợ hãi, áp lực","Anna can be intimidating.",5],
+["charisma","n","sức hút, uy tín cá nhân","a powerful attractive quality that makes people follow you",5],
+["visionary","n/adj","người có tầm nhìn","A leader with charisma may be described as a visionary.",5],
+["consensus","n","sự đồng thuận","management by consensus",5],
+["consultation","n","sự tham vấn","asking all employees to contribute",5],
+["top-down","adj","từ trên xuống","decisions imposed from above",5],
+["coaching and mentoring","n","huấn luyện và kèm cặp","one-to-one sessions to develop future managers",5],
+["initiative","n","sáng kiến, tính chủ động","use their own initiative",5],
+["supervision","n","sự giám sát","systems of close supervision",5],
+// ---------- Unit 6 ----------
+["ethical","adj","có đạo đức","noun: ethics",6],
+["corporate social responsibility (CSR)","n","trách nhiệm xã hội doanh nghiệp","a company's duty to society and the environment",6],
+["act responsibly","v","hành động có trách nhiệm","Companies should act responsibly.",6],
+["comply with regulations","v","tuân thủ quy định","do more than simply comply with the regulations",6],
+["reduce the impact","v","giảm tác động","reduce the impact they have on the environment",6],
+["donate","v","quyên góp","donate time, services and 1% of sales",6],
+["take an active part in","v","tham gia tích cực vào","take an active part in the local community",6],
+["stay true to its principles","v","giữ vững nguyên tắc","stay true to its principles even if it means a loss of profit",6],
+["share a strong commitment to","v","cùng cam kết mạnh mẽ","share a strong commitment to protecting the environment",6],
+["by-product","n","sản phẩm phụ","Pollution is a by-product of manufacturing.",6],
+["recycled","adj","tái chế","recycled polyester",6],
+["organic","adj","hữu cơ","organic cotton",6],
+["fair trade","n","thương mại công bằng","paying fair prices to small farmers",6],
+["bribery","n","hối lộ","an unethical practice",6],
+["deception / deceptive","n/adj","sự lừa dối / lừa dối","deceptive advertising",6],
+["corruption / corrupt","n/adj","tham nhũng","corrupt officials",6],
+["fairness / fair","n/adj","sự công bằng / công bằng","fair treatment of workers",6],
+["prejudice / prejudiced","n/adj","định kiến / có định kiến","prejudiced against women",6],
+["generosity / generous","n/adj","sự hào phóng / hào phóng","a generous donation",6],
+["greed / greedy","n/adj","sự tham lam / tham lam","greedy bankers",6],
+["credibility / credible","n/adj","uy tín / đáng tin","a credible company",6],
+["discrimination / discriminatory","n/adj","phân biệt đối xử","discriminatory recruitment",6],
+["ethos","n","tinh thần, giá trị cốt lõi","The USP of the business is its ethos.",6],
+["unique selling point (USP)","n","điểm bán hàng độc nhất","what makes a product different",6],
+["itinerary","n","lịch trình chuyến đi","We'll email you the final itinerary.",6],
+["highly recommended","phr","rất được khuyến nghị","A visit to the site is highly recommended.",6],
+["well worth a visit","phr","rất đáng ghé thăm","It's well worth a visit.",6],
+["ethical dilemma","n","tình huống khó xử về đạo đức","faced with the ethical dilemma of crossing the line",6],
+["cross the line","v","vượt quá giới hạn (làm điều sai)","doing bad things",6],
+["hand in your notice","v","nộp đơn nghỉ việc","You don't have to hand in your notice today.",6],
+// ---------- Unit 7 ----------
+["start-up","n","công ty khởi nghiệp","a new business",7],
+["entrepreneur","n","doanh nhân, người khởi nghiệp","someone who starts a business",7],
+["would-be entrepreneur","n","người muốn khởi nghiệp","people who would like to start their own business",7],
+["gap in the market","n","khoảng trống thị trường","opportunity to sell something not yet available",7],
+["pop-up stall","n","quầy bán tạm thời","a place to sell something for a short period of time",7],
+["temporary outlet","n","điểm bán tạm thời","a temporary place to sell your products",7],
+["start-up capital","n","vốn khởi nghiệp","money to set up a business",7],
+["financial backing","n","hậu thuẫn tài chính","money to help and support someone's business",7],
+["investment fund","n","quỹ đầu tư","money from people who will invest in a business",7],
+["venture capitalist","n","nhà đầu tư mạo hiểm","invests in a business in return for part of its profits",7],
+["return on investment (ROI)","n","lợi nhuận trên vốn đầu tư","profit from putting money into a business",7],
+["turn over","v","đạt doanh thu","The business turns over £100 million a year.",7],
+["business model","n","mô hình kinh doanh","the way a business operates to make money",7],
+["take over","v","thâu tóm, mua lại","It was taken over by Coca-Cola in 2013.",7],
+["test the market","v","thử nghiệm thị trường","A pop-up is a cheap way to test the market.",7],
+["downside","n","mặt trái, bất lợi","The downside is that investors want a share of profits.",7],
+["gradable adjective","n","tính từ có mức độ","good, risky, difficult – use very/extremely",7],
+["ungradable adjective","n","tính từ cực hạn","perfect, terrible, impossible – use absolutely/completely",7],
+["outrageous","adj","quá đáng, không thể chấp nhận","An 80% share is outrageous!",7],
+["ridiculous","adj","lố bịch, vô lý","It's absolutely ridiculous!",7],
+["business acquaintance","n","người quen trong công việc","someone you know through business",7],
+["ex-colleague","n","đồng nghiệp cũ","Ex-work colleagues met at a trade fair.",7],
+["chance encounter","n","cuộc gặp tình cờ","a chance encounter at the airport",7],
+["hectic","adj","bận rộn, hối hả","Life's been extremely hectic.",7],
+["commute","v","đi lại (giữa nơi ở và nơi làm)","I've been commuting between France and Belgium.",7],
+// ---------- Unit 8 ----------
+["hierarchical","adj","có thứ bậc","organized in levels",8],
+["egalitarian","adj","bình đẳng","Managers socialize with employees.",8],
+["formal","adj","trang trọng, lễ nghi","very polite",8],
+["liberal","adj","tự do, cởi mở","allowing freedom",8],
+["individualistic","adj","đề cao cá nhân","focusing on one person",8],
+["collectivist","adj","đề cao tập thể","shared by all the group",8],
+["masculine / feminine (culture)","adj","văn hoá nam tính / nữ tính","competitive 'live to work' vs quality of life 'work to live'",8],
+["assertiveness","n","sự quyết đoán, mạnh mẽ","Competitiveness and assertiveness are encouraged.",8],
+["cautious","adj","thận trọng","careful",8],
+["risk-taking","adj","chấp nhận rủi ro","willing to take risks",8],
+["strict","adj","nghiêm ngặt","something which must be obeyed",8],
+["open (to new ideas)","adj","cởi mở","receptive of new ideas",8],
+["accepting (of change)","adj","chấp nhận, khoan dung","willing to tolerate something",8],
+["sensitive to","adj+prep","nhạy cảm với","always very sensitive to their guests' feelings",8],
+["adjust to","v+prep","thích nghi với","hard to adjust to the hierarchical culture",8],
+["familiar with","adj+prep","quen thuộc với","not familiar with the way business is done",8],
+["aware of","adj+prep","nhận thức được","not aware of the custom",8],
+["respectful of","adj+prep","tôn trọng","be respectful of people of a higher rank",8],
+["informed about","adj+prep","được biết, nắm thông tin về","informed about business etiquette",8],
+["used to","adj+prep","quen với","I'm used to people being direct.",8],
+["tolerant of","adj+prep","khoan dung với","not very tolerant of arriving late",8],
+["etiquette","n","phép lịch sự, nghi thức","business etiquette in Brazil",8],
+["seconded","v (passive)","được biệt phái","before I was seconded there",8],
+["critical incident","n","sự cố giao tiếp (văn hoá)","a confusing or problematic communication situation",8],
+["faux pas","n","hành động thất thố","a cultural faux pas",8],
+["loss of face","n","mất thể diện","saying 'yes' to avoid loss of face",8],
+["seniority","n","thâm niên, cấp bậc","respect for my seniority",8],
+["punctuality","n","sự đúng giờ","the importance of punctuality",8],
+["small talk","n","chuyện phiếm xã giao","small talk before meetings",8],
+["intercultural","adj","liên văn hoá","understanding intercultural differences",8],
+["chauffeur","n","tài xế riêng","The chauffeur pulled over.",8],
+["flat tyre","n","lốp xe bị xẹp","The car got a flat tyre.",8],
+["pay off (a mortgage)","v","trả hết (khoản vay)","His mortgage had been paid off.",8]
+];
+window.VOCAB = VOCAB_RAW.map((v, i) => ({ id: i, w: v[0], pos: v[1], vn: v[2], ex: v[3], u: v[4] }));
+
+</script>
+<script>
+(function () {
+  "use strict";
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  /* ---------- storage ---------- */
+  const KEY = "emba-english-v1";
+  let P = { ex: {}, vocab: {}, exams: [] };
+  try { const raw = localStorage.getItem(KEY); if (raw) P = Object.assign(P, JSON.parse(raw)); } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} };
+
+  /* ---------- helpers ---------- */
+  const norm = s => String(s).toLowerCase()
+    .replace(/[’‘`´]/g, "'").replace(/[“”"]/g, "")
+    .replace(/[.,!?;:()…]/g, " ").replace(/\s+/g, " ").trim();
+  function isCorrect(input, answerSpec) {
+    const u = norm(input); if (!u) return false;
+    return answerSpec.split("|").some(a => {
+      const n = norm(a);
+      if (u === n) return true;
+      if (n.length >= 6 && u.includes(n) && u.length <= n.length + 14) return true;
+      // accept contraction / full form variants
+      const exp = x => x.replace(/'ll\b/g, " will").replace(/'re\b/g, " are").replace(/'d\b/g, " would").replace(/'ve\b/g, " have").replace(/'s\b/g, " is").replace(/\s+/g, " ").trim();
+      return exp(u) === exp(n) || (n.length >= 6 && exp(u).includes(exp(n)) && u.length <= n.length + 18);
+    });
+  }
+  const first = spec => spec.split("|")[0];
+  function seeded(str) { let h = 2166136261; for (const c of str) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 100000) / 100000; }; }
+  function shuffle(arr, rnd = Math.random) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  const uniq = a => Array.from(new Set(a));
+  function speak(t) {
+    try {
+      const clean = String(t).replace(/\([^)]*\)/g, "").replace(/_+/g, " blank ");
+      const u = new SpeechSynthesisUtterance(clean); u.lang = "en-GB"; u.rate = 0.92;
+      const v = speechSynthesis.getVoices().find(v => /en[-_]GB/i.test(v.lang)) || speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+      if (v) u.voice = v;
+      speechSynthesis.cancel(); speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+  window.__speak = speak;
+  const spk = t => `<button class="spk" title="Nghe phát âm" data-say="${esc(t)}">🔊</button>`;
+
+  const ALL_EX = []; UNITS.forEach(u => u.exercises.forEach(e => { e.unit = u.id; ALL_EX.push(e); }));
+  const gradable = e => ["fill", "match", "mcq"].includes(e.type);
+  function unitProgress(u) {
+    const ex = u.exercises.filter(gradable); if (!ex.length) return 0;
+    let done = 0; ex.forEach(e => { const r = P.ex[e.id]; if (r) done += r.best / r.total; });
+    return Math.round(done / ex.length * 100);
+  }
+  const vocabLearned = list => list.filter(v => (P.vocab[v.id] || 0) >= 3).length;
+
+  /* ---------- exercise rendering ---------- */
+  function renderExercise(e) {
+    const r = P.ex[e.id];
+    const badge = r ? `<span class="badge ${r.best === r.total ? "ok" : ""}">Tốt nhất: ${r.best}/${r.total}</span>` : "";
+    let body = "";
+    if (e.type === "info") body = `<div class="info">${e.html}</div>`;
+    if (e.type === "match") {
+      const rnd = seeded(e.id);
+      const opts = shuffle(uniq(e.items.map(i => i.r.trim()).concat(e.extra || [])), rnd);
+      body = `<ol class="items">` + e.items.map((it, k) => `<li class="row" data-k="${k}">
+        <div class="q">${esc(it.l)}</div>
+        <select><option value="">— chọn —</option>${opts.map(o => `<option>${esc(o)}</option>`).join("")}</select>
+        <div class="fb"></div></li>`).join("") + `</ol>`;
+    }
+    if (e.type === "fill") {
+      body = `<ol class="items">` + e.items.map((it, k) => `<li class="row" data-k="${k}">
+        <div class="q">${esc(it.q)}</div>
+        <div class="inputs">${it.a.map((_, b) => `<input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${it.a.length > 1 ? "ô " + (b + 1) : "trả lời"}">`).join("")}</div>
+        <div class="fb"></div></li>`).join("") + `</ol>`;
+    }
+    if (e.type === "mcq") {
+      body = `<ol class="items">` + e.items.map((it, k) => `<li class="row" data-k="${k}">
+        <div class="q">${esc(it.q)}</div>
+        <div class="opts">${it.o.map((o, j) => `<label class="opt"><input type="radio" name="${e.id}-${k}" value="${j}"><span>${esc(o)}</span></label>`).join("")}</div>
+        <div class="fb"></div></li>`).join("") + `</ol>`;
+    }
+    if (e.type === "open") {
+      body = `<ol class="items">` + e.items.map((it, k) => `<li class="row open">
+        <div class="q">${esc(it.q)} ${spk(it.q)}</div>
+        <textarea rows="2" placeholder="Viết câu trả lời của bạn (không bắt buộc)…"></textarea>
+        <details><summary>Xem bài mẫu</summary><div class="model">${esc(it.model).replace(/\n/g, "<br>")} ${spk(it.model)}</div></details></li>`).join("") + `</ol>`;
+    }
+    const actions = gradable(e) ? `<div class="actions"><button class="btn primary" data-act="check">Kiểm tra</button><button class="btn" data-act="show">Xem đáp án</button><button class="btn ghost" data-act="reset">Làm lại</button><span class="score"></span></div>` : "";
+    return `<section class="card ex" id="${e.id}" data-ex="${e.id}">
+      <header><h3>${esc(e.title)}</h3>${badge}</header>
+      ${e.intro ? `<p class="intro">${esc(e.intro)}</p>` : ""}${body}${actions}</section>`;
+  }
+
+  function gradeExercise(sec, reveal) {
+    const e = ALL_EX.find(x => x.id === sec.dataset.ex); let ok = 0, total = 0;
+    $$(".row", sec).forEach(row => {
+      const it = e.items[+row.dataset.k]; const fb = $(".fb", row); let good = false, ans = "";
+      if (e.type === "match") {
+        const sel = $("select", row); ans = it.r.trim();
+        if (reveal) sel.value = ans;
+        good = sel.value === ans;
+      } else if (e.type === "fill") {
+        const ins = $$("input", row); good = true;
+        ins.forEach((inp, b) => { if (reveal) inp.value = first(it.a[b]); const g = isCorrect(inp.value, it.a[b]); inp.classList.toggle("good", g); inp.classList.toggle("bad", !g); if (!g) good = false; });
+        ans = it.a.map(first).join("  /  ");
+      } else if (e.type === "mcq") {
+        if (reveal) { const rb = $$("input", row)[it.a]; rb.checked = true; }
+        const sel = $("input:checked", row); good = sel && +sel.value === it.a; ans = it.o[it.a];
+        $$(".opt", row).forEach((l, j) => { l.classList.toggle("right", j === it.a && (reveal || !!sel)); l.classList.toggle("wrong", !!sel && +sel.value === j && j !== it.a); });
+      }
+      total++; if (good) ok++;
+      row.classList.toggle("ok", good); row.classList.toggle("no", !good);
+      fb.innerHTML = (good ? `<span class="okt">✔ Đúng</span>` : `<span class="not">✘ Đáp án: <b>${esc(ans)}</b></span>`) + (it.ex ? `<div class="exp">💡 ${esc(it.ex)}</div>` : "");
+    });
+    $(".score", sec).textContent = reveal ? "Đã hiện đáp án" : `Điểm: ${ok}/${total}`;
+    if (!reveal) {
+      const prev = P.ex[e.id]; P.ex[e.id] = { best: Math.max(ok, prev ? prev.best : 0), total, last: ok, t: Date.now() }; save();
+      const head = $("header", sec); let b = $(".badge", head); if (!b) { b = document.createElement("span"); head.appendChild(b); }
+      b.className = "badge" + (P.ex[e.id].best === total ? " ok" : ""); b.textContent = `Tốt nhất: ${P.ex[e.id].best}/${total}`;
+    }
+  }
+
+  /* ---------- pages ---------- */
+  const main = () => $("#main");
+  function setActiveNav(h) { $$("#nav a").forEach(a => a.classList.toggle("active", h.startsWith(a.getAttribute("href")))); }
+
+  function pageHome() {
+    const totalEx = ALL_EX.filter(gradable).length, doneEx = ALL_EX.filter(e => gradable(e) && P.ex[e.id]).length;
+    const learned = vocabLearned(VOCAB);
+    return `<div class="hero"><div><p class="kicker">Đại học Thương Mại · Chương trình eMBA</p><h1>English for Business</h1>
+      <p>Học từng unit theo 4 bước: <b>Hiểu bản chất → Đọc tóm tắt → Làm bài tập có giải thích → Luyện nói/viết</b>. Ôn từ vựng bằng flashcard và làm đề thi thử trộn câu hỏi từ cả 8 unit.</p>
+      <div class="stats"><div><b>${doneEx}/${totalEx}</b><span>bài tập đã làm</span></div><div><b>${learned}/${VOCAB.length}</b><span>từ đã thuộc</span></div><div><b>${P.exams.length ? P.exams[P.exams.length - 1].pct + "%" : "—"}</b><span>đề thi thử gần nhất</span></div></div></div></div>
+      <h2 class="sec">8 Units</h2><div class="grid">${UNITS.map(u => `<a class="ucard" href="#unit/${u.id}/concepts">
+        <div class="unum">Unit ${u.id}</div><h3>${esc(u.title)}</h3><p class="vn">${esc(u.vn)}</p><p class="goal">${esc(u.goal)}</p>
+        <div class="bar"><i style="width:${unitProgress(u)}%"></i></div><small>${unitProgress(u)}% bài tập · ${vocabLearned(VOCAB.filter(v => v.u === u.id))}/${VOCAB.filter(v => v.u === u.id).length} từ</small></a>`).join("")}</div>
+      <h2 class="sec">Chiến lược để đạt điểm tối đa</h2>
+      <div class="card tips"><ol>
+        <li><b>Mỗi unit:</b> đọc tab <i>Bản chất</i> trước (hiểu vì sao), rồi mới làm <i>Bài tập</i>. Làm sai → đọc dòng 💡 giải thích.</li>
+        <li><b>Lặp lại đến khi đạt 100%</b> mọi bài tập (nút "Làm lại"). Điểm tốt nhất được lưu trên trình duyệt này.</li>
+        <li><b>Từ vựng:</b> mỗi ngày 15 phút flashcard, ưu tiên từ "chưa thuộc". Học theo cụm (collocation): <i>comply with regulations, raise capital, a sharp rise</i>.</li>
+        <li><b>Ngữ pháp trọng tâm:</b> mô tả xu hướng (U1), tiền tố phủ định (U5), 4 cách nói tương lai (U6), hiện tại hoàn thành đơn/tiếp diễn (U7), thì kể chuyện + tính từ đi với giới từ (U8).</li>
+        <li><b>Kiến thức chuyên môn hay ra:</b> GDP vs GNP, surplus vs deficit, 3 khu vực kinh tế, IPO/underwrite/rights issue, 7 phần của annual report, balance sheet (debtors vs creditors), Theory X/Y, Hofstede.</li>
+        <li><b>Thi nói/viết:</b> học thuộc các bài mẫu ở tab <i>Thảo luận</i>, thay bằng ví dụ Việt Nam/công ty của bạn.</li>
+        <li><b>Tuần trước khi thi:</b> làm <a href="#exam">Đề thi thử</a> 50 câu, mục tiêu ≥ 90% hai lần liên tiếp.</li></ol></div>`;
+  }
+
+  const TABS = [["concepts", "Bản chất"], ["readings", "Bài đọc"], ["exercises", "Bài tập"], ["discussion", "Nói & Viết"], ["vocab", "Từ vựng"]];
+  function pageUnit(id, tab) {
+    const u = UNITS.find(x => x.id === +id); if (!u) return pageHome();
+    tab = tab || "concepts";
+    let c = "";
+    if (tab === "concepts") c = u.concepts.map(k => `<section class="card concept"><h3>${k.h}</h3>${k.body}</section>`).join("");
+    if (tab === "readings") c = `<p class="note">Tóm tắt tiếng Việt các bài đọc — đọc song song với tài liệu gốc để hiểu nhanh và trả lời câu hỏi đúng ý.</p>` + u.readings.map(r => `<section class="card"><h3>${esc(r.t)}</h3>${r.s}</section>`).join("");
+    if (tab === "exercises") c = `<p class="note">Có ${u.exercises.filter(gradable).length} bài tự chấm. Ô điền chấp nhận nhiều cách viết đúng; không phân biệt hoa/thường.</p>
+      <nav class="toc">${u.exercises.map(e => `<a href="#unit/${u.id}/exercises/${e.id}">${esc(e.title.split(":")[0])}${P.ex[e.id] ? (P.ex[e.id].best === P.ex[e.id].total ? " ✔" : " ·") : ""}</a>`).join("")}</nav>` + u.exercises.map(renderExercise).join("");
+    if (tab === "discussion") c = `<p class="note">Câu hỏi thảo luận/viết kèm bài mẫu chuẩn. Tự trả lời trước, sau đó mở bài mẫu để so sánh; bấm 🔊 để nghe.</p>` + renderExercise({ id: "disc" + u.id, type: "open", title: "Discussion & model answers", items: u.discussion });
+    if (tab === "vocab") c = vocabTable(VOCAB.filter(v => v.u === u.id)) + `<p><a class="btn primary" href="#vocab/cards/${u.id}">Học flashcard Unit ${u.id}</a> <a class="btn" href="#vocab/quiz/${u.id}">Kiểm tra từ vựng Unit ${u.id}</a></p>`;
+    return `<div class="uhead"><div class="unum">Unit ${u.id}</div><h1>${esc(u.title)} <span class="vn">— ${esc(u.vn)}</span></h1><p class="goal">🎯 ${esc(u.goal)}</p>
+      <div class="bar"><i style="width:${unitProgress(u)}%"></i></div></div>
+      <div class="tabs">${TABS.map(([k, n]) => `<a class="${k === tab ? "on" : ""}" href="#unit/${u.id}/${k}">${n}</a>`).join("")}</div>
+      <div class="tabbody">${c}</div>
+      <div class="pager">${u.id > 1 ? `<a class="btn ghost" href="#unit/${u.id - 1}/${tab}">← Unit ${u.id - 1}</a>` : "<span></span>"}${u.id < 8 ? `<a class="btn ghost" href="#unit/${u.id + 1}/${tab}">Unit ${u.id + 1} →</a>` : ""}</div>`;
+  }
+
+  function vocabTable(list) {
+    return `<div class="card"><div class="vtools"><input id="vsearch" type="search" placeholder="Tìm từ (Anh hoặc Việt)…"><span class="muted">${list.length} từ</span></div>
+      <div class="vtable">${list.map(v => `<div class="vrow" data-s="${esc((v.w + " " + v.vn + " " + v.ex).toLowerCase())}">
+        <div class="vw"><b>${esc(v.w)}</b> <i>${esc(v.pos)}</i> ${spk(v.w)}</div><div class="vv">${esc(v.vn)}</div><div class="ve">${esc(v.ex)}</div>
+        <div class="vs">${(P.vocab[v.id] || 0) >= 3 ? `<span class="badge ok">đã thuộc</span>` : `<span class="badge">U${v.u}</span>`}</div></div>`).join("")}</div></div>`;
+  }
+
+  /* ---------- vocabulary: cards / quiz / list ---------- */
+  function unitSelect(cur, base) {
+    return `<div class="seg">${[["all", "Tất cả"]].concat(UNITS.map(u => [String(u.id), "U" + u.id])).map(([k, n]) => `<a class="${String(cur) === k ? "on" : ""}" href="#${base}/${k}">${n}</a>`).join("")}</div>`;
+  }
+  let card = null, cardFlipped = false;
+  function pickCard(list) {
+    const minBox = Math.min(...list.map(v => P.vocab[v.id] || 0));
+    const pool = list.filter(v => (P.vocab[v.id] || 0) <= minBox + 1 && (!card || v.id !== card.id));
+    return pool[Math.floor(Math.random() * pool.length)] || list[0];
+  }
+  function pageVocab(mode, unit) {
+    mode = mode || "cards"; unit = unit || "all";
+    const list = unit === "all" ? VOCAB : VOCAB.filter(v => v.u === +unit);
+    const sub = `<div class="tabs">${[["cards", "Flashcard"], ["quiz", "Kiểm tra"], ["list", "Danh sách"]].map(([k, n]) => `<a class="${k === mode ? "on" : ""}" href="#vocab/${k}/${unit}">${n}</a>`).join("")}</div>` + unitSelect(unit, "vocab/" + mode);
+    let c = "";
+    if (mode === "list") c = vocabTable(list);
+    if (mode === "cards") {
+      if (!card || !list.includes(card)) card = pickCard(list); cardFlipped = false;
+      const learned = vocabLearned(list);
+      c = `<div class="fcwrap"><div class="muted center">Đã thuộc ${learned}/${list.length} từ · Hộp ghi nhớ của từ này: ${P.vocab[card.id] || 0}/5</div>
+        <div class="bar"><i style="width:${Math.round(learned / list.length * 100)}%"></i></div>
+        <div class="flash" id="flash" tabindex="0"><div class="front"><div class="fw">${esc(card.w)}</div><div class="fp">${esc(card.pos)} · Unit ${card.u}</div><div class="hint">Bấm vào thẻ (hoặc phím Space) để lật</div></div>
+        <div class="back"><div class="fv">${esc(card.vn)}</div><div class="fe">${esc(card.ex)}</div></div></div>
+        <div class="fcbtns"><button class="btn" data-say="${esc(card.w)}">🔊 Nghe</button><button class="btn bad" id="fcNo">✘ Chưa thuộc (1)</button><button class="btn good" id="fcYes">✔ Đã thuộc (2)</button></div>
+        <p class="muted center">Thuật toán lặp lại ngắt quãng: từ "chưa thuộc" sẽ xuất hiện lại thường xuyên hơn. Từ đạt hộp ≥ 3 được tính là đã thuộc.</p></div>`;
+    }
+    if (mode === "quiz") c = `<div id="vquiz"></div>`;
+    setTimeout(() => {
+      if (mode === "quiz") startVocabQuiz(list);
+      if (mode === "cards") bindCards(list);
+    });
+    return `<h1>Từ vựng <span class="vn">— ${VOCAB.length} từ & cụm từ theo 8 unit</span></h1>${sub}${c}`;
+  }
+  function bindCards(list) {
+    const f = $("#flash"); if (!f) return;
+    const flip = () => { cardFlipped = !cardFlipped; f.classList.toggle("flipped", cardFlipped); if (cardFlipped) speak(card.w); };
+    f.onclick = flip;
+    const next = good => { P.vocab[card.id] = good ? Math.min(5, (P.vocab[card.id] || 0) + 1) : 1; save(); card = pickCard(list); route(); };
+    $("#fcYes").onclick = () => next(true); $("#fcNo").onclick = () => next(false);
+    document.onkeydown = ev => {
+      if (!$("#flash")) { document.onkeydown = null; return; }
+      if (ev.target.tagName === "INPUT" || ev.target.tagName === "TEXTAREA") return;
+      if (ev.code === "Space") { ev.preventDefault(); flip(); } else if (ev.key === "1") next(false); else if (ev.key === "2") next(true);
+    };
+  }
+  function makeVocabQ(v, pool) {
+    const others = shuffle(pool.filter(x => x.id !== v.id)).slice(0, 3);
+    const t = Math.floor(Math.random() * 4);
+    if (t === 0) return { type: "mcq", q: `Nghĩa của "${v.w}" là gì?`, o: shuffle([v.vn, ...others.map(o => o.vn)]), ans: v.vn, ex: `${v.w} = ${v.vn}. ${v.ex}`, say: v.w };
+    if (t === 1) return { type: "mcq", q: `Từ nào có nghĩa "${v.vn}"?`, o: shuffle([v.w, ...others.map(o => o.w)]), ans: v.w, ex: v.ex };
+    if (t === 2) return { type: "mcq", q: `Which word matches: "${v.ex}"?`, o: shuffle([v.w, ...others.map(o => o.w)]), ans: v.w, ex: `${v.w} = ${v.vn}` };
+    const typed = v.w.split(/\s*[\/(]/)[0].trim();
+    return { type: "type", q: `Gõ từ tiếng Anh cho: "${v.vn}" (${v.pos}) — gợi ý: ${typed[0]}${"_".repeat(Math.max(0, typed.length - 1)).replace(/_/g, "_ ")}`, ans: typed, ex: `${v.w} = ${v.vn}. ${v.ex}` };
+  }
+  function startVocabQuiz(list) {
+    const pool = list.length >= 4 ? list : VOCAB;
+    const qs = shuffle(list).slice(0, Math.min(10, list.length)).map(v => makeVocabQ(v, pool));
+    runQuiz($("#vquiz"), qs, "Kiểm tra từ vựng", null);
+  }
+
+  /* ---------- generic quiz runner (vocab quiz + exam) ---------- */
+  function runQuiz(el, qs, title, onDone, timerMin) {
+    let i = 0, score = 0; const wrong = []; const t0 = Date.now(); let timerId = null;
+    function draw() {
+      if (i >= qs.length) return finish();
+      const q = qs[i];
+      el.innerHTML = `<div class="card quiz"><div class="qtop"><b>${esc(title)}</b><span>Câu ${i + 1}/${qs.length} · Đúng ${score}</span><span id="qtimer"></span></div>
+        <div class="bar"><i style="width:${i / qs.length * 100}%"></i></div>
+        ${q.src ? `<div class="muted">${esc(q.src)}</div>` : ""}<div class="qq">${esc(q.q)} ${q.say ? spk(q.say) : ""}</div>
+        ${q.type === "mcq" ? `<div class="qopts">${q.o.map((o, j) => `<button class="qopt" data-j="${j}">${String.fromCharCode(65 + j)}. ${esc(o)}</button>`).join("")}</div>`
+          : `<div class="qtype"><input id="qin" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ đáp án rồi Enter"><button class="btn primary" id="qok">Trả lời</button></div>`}
+        <div class="qfb"></div></div>`;
+      tick();
+      const answer = (given, good) => {
+        if (good) score++; else wrong.push({ q, given });
+        const fb = $(".qfb", el);
+        fb.innerHTML = (good ? `<div class="okt">✔ Chính xác!</div>` : `<div class="not">✘ Đáp án đúng: <b>${esc(q.type === "mcq" ? q.ans : first(q.ans))}</b></div>`) + (q.ex ? `<div class="exp">💡 ${esc(q.ex)}</div>` : "") + `<button class="btn primary" id="qnext">${i + 1 < qs.length ? "Câu tiếp →" : "Xem kết quả"}</button>`;
+        $("#qnext").onclick = () => { i++; draw(); }; $("#qnext").focus();
+      };
+      if (q.type === "mcq") $$(".qopt", el).forEach(b => b.onclick = () => {
+        const j = +b.dataset.j, good = q.o[j] === q.ans;
+        $$(".qopt", el).forEach((x, k) => { x.disabled = true; if (q.o[k] === q.ans) x.classList.add("right"); });
+        if (!good) b.classList.add("wrong"); answer(q.o[j], good);
+      });
+      else { const inp = $("#qin"); inp.focus(); const go = () => { if ($("#qnext")) return; inp.disabled = true; const g = isCorrect(inp.value, q.ans); inp.classList.add(g ? "good" : "bad"); answer(inp.value, g); };
+        $("#qok").onclick = go; inp.onkeydown = ev => { if (ev.key === "Enter") go(); }; }
+    }
+    function tick() {
+      if (!timerMin) return; const tEl = $("#qtimer"); if (!tEl) return;
+      const left = timerMin * 60 - Math.floor((Date.now() - t0) / 1000);
+      if (left <= 0) { clearInterval(timerId); i = qs.length; return finish(true); }
+      tEl.textContent = `⏱ ${Math.floor(left / 60)}:${String(left % 60).padStart(2, "0")}`;
+      if (!timerId) timerId = setInterval(() => { if (!document.body.contains(el)) return clearInterval(timerId); tick(); }, 1000);
+    }
+    function finish(timeout) {
+      clearInterval(timerId);
+      const pct = Math.round(score / qs.length * 100); if (onDone) onDone(score, qs.length, pct);
+      const mins = Math.round((Date.now() - t0) / 60000);
+      el.innerHTML = `<div class="card result"><h2>${timeout ? "Hết giờ! " : ""}Kết quả: ${score}/${qs.length} (${pct}%)</h2>
+        <p>${pct >= 90 ? "🎉 Xuất sắc! Bạn đã sẵn sàng." : pct >= 70 ? "👍 Khá tốt. Ôn lại các câu sai bên dưới." : "📚 Cần ôn thêm. Đọc lại tab Bản chất của các unit có câu sai."} · Thời gian: ~${mins} phút</p>
+        <button class="btn primary" id="again">Làm lượt mới</button>
+        ${wrong.length ? `<h3>Các câu cần ôn lại (${wrong.length})</h3><ol class="review">${wrong.map(w => `<li><div>${w.q.src ? `<span class="muted">${esc(w.q.src)}</span><br>` : ""}${esc(w.q.q)}</div>
+          <div class="not">Bạn chọn: ${esc(w.given || "(bỏ trống)")} → Đúng: <b>${esc(w.q.type === "mcq" ? w.q.ans : first(w.q.ans))}</b></div>${w.q.ex ? `<div class="exp">💡 ${esc(w.q.ex)}</div>` : ""}</li>`).join("")}</ol>` : ""}</div>`;
+      $("#again").onclick = () => route(true);
+    }
+    draw();
+  }
+
+  /* ---------- exam ---------- */
+  function buildExamPool(units, withVocab) {
+    const pool = [];
+    ALL_EX.filter(e => units.includes(e.unit)).forEach(e => {
+      const src = `Unit ${e.unit} · ${e.title}`;
+      if (e.type === "mcq") e.items.forEach(it => pool.push({ type: "mcq", q: it.q, o: shuffle(it.o), ans: it.o[it.a], ex: it.ex, src }));
+      if (e.type === "match") e.items.forEach(it => {
+        const others = shuffle(uniq(e.items.map(x => x.r.trim()).filter(r => r !== it.r.trim()))).slice(0, 3);
+        pool.push({ type: "mcq", q: it.l, o: shuffle([it.r.trim(), ...others]), ans: it.r.trim(), ex: it.ex, src });
+      });
+      if (e.type === "fill") e.items.forEach(it => { if (it.a.length === 1) pool.push({ type: "type", q: it.q, ans: it.a[0], ex: it.ex, src }); });
+    });
+    if (withVocab) { const vl = VOCAB.filter(v => units.includes(v.u)); shuffle(vl).slice(0, Math.ceil(vl.length / 3)).forEach(v => { const q = makeVocabQ(v, vl); q.src = `Từ vựng Unit ${v.u}`; pool.push(q); }); }
+    return pool;
+  }
+  function pageExam() {
+    const hist = P.exams.slice(-5).reverse();
+    setTimeout(() => {
+      $("#examGo").onclick = () => {
+        const units = $$(".eu:checked").map(x => +x.value); if (!units.length) { $("#examBox").innerHTML = `<p class="warn">Hãy chọn ít nhất 1 unit.</p>`; return; }
+        const n = +$("#en").value, withV = $("#ev").checked, timed = $("#et").checked;
+        const qs = shuffle(buildExamPool(units, withV)).slice(0, n);
+        runQuiz($("#examBox"), qs, "Đề thi thử", (s, t, pct) => { P.exams.push({ s, t, pct, d: Date.now(), units }); save(); }, timed ? Math.ceil(qs.length * 0.75) : 0);
+        $("#examBox").scrollIntoView({ behavior: "smooth" });
+      };
+    });
+    return `<h1>Luyện thi <span class="vn">— đề trộn ngẫu nhiên từ toàn bộ bài tập & từ vựng</span></h1>
+      <div class="card"><div class="examset"><div><b>Chọn unit:</b><div class="chk">${UNITS.map(u => `<label><input type="checkbox" class="eu" value="${u.id}" checked> U${u.id}</label>`).join("")}</div></div>
+      <div><b>Số câu:</b> <select id="en"><option>20</option><option selected>30</option><option>50</option><option>80</option></select></div>
+      <div><label><input type="checkbox" id="ev" checked> Có câu hỏi từ vựng</label><br><label><input type="checkbox" id="et"> Tính giờ (45 giây/câu)</label></div>
+      <button class="btn primary big" id="examGo">Bắt đầu làm bài</button></div>
+      ${hist.length ? `<p class="muted">Lịch sử: ${hist.map(h => `${new Date(h.d).toLocaleDateString("vi-VN")} – <b>${h.pct}%</b> (${h.s}/${h.t})`).join(" · ")}</p>` : ""}</div>
+      <div id="examBox"></div>
+      <h2 class="sec">Câu hỏi lý thuyết hay gặp (trả lời ngắn bằng tiếng Anh)</h2>
+      ${renderExercise({ id: "examTheory", type: "open", title: "Short-answer theory questions", items: THEORY })}`;
+  }
+  const THEORY = [
+    { q: "What is the difference between GDP and GNP?", model: "GDP is the value of all finished goods and services produced within a country's borders. GNP is the value of goods and services produced by a country's nationals, wherever they are." },
+    { q: "What is a trade deficit?", model: "A trade deficit is when a country's imports are larger than its exports, so the balance of trade is negative." },
+    { q: "Name the three economic sectors and give an example of each.", model: "The primary sector provides raw materials (e.g. agriculture, mining); the secondary sector manufactures finished products (e.g. steel, textiles); the service sector provides support activities (e.g. banking, retailing)." },
+    { q: "What are the two main functions of a stock market?", model: "It is a place for companies to raise new capital by issuing shares (primary listing/IPO) and a platform for investors to trade existing shares (secondary market)." },
+    { q: "What does it mean to underwrite an IPO?", model: "The investment bank promises to buy any shares that are not sold to investors." },
+    { q: "Why does a share price fall after a rights issue?", model: "Because new shares are issued, so each existing share represents a smaller percentage of the company (dilution)." },
+    { q: "What are the main sections of an annual report?", model: "Chairman's statement, outlook, corporate governance, statement of directors' responsibilities, independent auditor's report, financial statements and notes to the accounts." },
+    { q: "What is the difference between debtors and creditors?", model: "Debtors are customers who owe money to the company (a current asset). Creditors are people the company owes money to, such as suppliers (a liability)." },
+    { q: "Explain Theory X and Theory Y.", model: "Theory X managers believe people must be directed and controlled through an authoritarian system and close supervision. Theory Y managers believe individual and organizational goals can be integrated, so committed people will exercise self-direction and self-control." },
+    { q: "What is empowerment?", model: "Empowerment means giving employees the right to use their own initiative and take decisions without asking managers first." },
+    { q: "What makes a business ethical?", model: "It acts responsibly, complies with and goes beyond regulations, reduces its impact on the environment, treats workers and suppliers fairly (fair trade), supports the community and stays true to its principles." },
+    { q: "When do we use the present continuous for the future?", model: "For fixed arrangements or appointments, e.g. 'I'm meeting Mrs. Brasseler at 3.30.'" },
+    { q: "Describe Hofstede's four pairs of cultural factors.", model: "Hierarchical vs egalitarian, individualistic vs collectivist, masculine vs feminine, and cautious vs risk-taking." }
+  ];
+
+  /* ---------- grammar & skills ---------- */
+  const GRAMMAR_REFS = [[1, 3], [5, 1], [6, 2], [6, 3], [7, 1], [7, 2], [7, 3], [8, 1], [8, 2], [8, 3]];
+  function pageGrammar() {
+    return `<h1>Ngữ pháp & Kỹ năng <span class="vn">— tổng hợp trọng tâm của 8 unit</span></h1>
+      <nav class="toc">${GRAMMAR_REFS.map(([u, k], n) => `<a href="#grammar/g${n}">U${u}: ${esc(UNITS[u - 1].concepts[k].h.replace(/^\d+\.\s*/, "").split("–")[0])}</a>`).join("")}<a href="#grammar/w1">Mẫu viết: mô tả biểu đồ</a><a href="#grammar/w2">Mẫu nói: giới thiệu & thảo luận</a></nav>
+      ${GRAMMAR_REFS.map(([u, k], n) => `<section class="card concept" id="g${n}"><div class="unum">Unit ${u}</div><h3>${UNITS[u - 1].concepts[k].h}</h3>${UNITS[u - 1].concepts[k].body}</section>`).join("")}
+      <section class="card concept" id="w1"><h3>Mẫu viết: Mô tả biểu đồ / số liệu (describing trends)</h3>
+      <p><b>Cấu trúc 3 phần:</b> (1) Giới thiệu biểu đồ: <i>The graph shows… between… and…</i> (2) Xu hướng chính: <i>Overall, … rose/fell…</i> (3) Chi tiết số liệu với from/to/by + adverb.</p>
+      <div class="model">The graph shows the UK inflation rate from January to October. Overall, inflation increased during the period. It stood at 1.8% in January and rose steadily to 2.4% in August. After that, it increased sharply to 3.4% in October. By contrast, interest rates fell dramatically from 5% in 2007 to 0.75% in 2009, and then remained stable. ${spk("The graph shows the UK inflation rate from January to October. Overall, inflation increased during the period.")}</div>
+      <p class="tip">Từ nối hữu ích: <i>Overall, By contrast, However, After that, In comparison, while</i>. Động từ thêm: <i>remain stable, level off, reach a peak of, hit a low of</i>.</p></section>
+      <section class="card concept" id="w2"><h3>Mẫu nói: Giới thiệu & trình bày quan điểm</h3>
+      <ul><li><b>Nêu ý kiến:</b> In my opinion, … / I strongly believe that … / From my experience, …</li>
+      <li><b>Đưa lý do:</b> The main reason is that … / This is because … / For example, …</li>
+      <li><b>So sánh:</b> Compared with …, … / Whereas …, … / On the other hand, …</li>
+      <li><b>Đồng ý/không đồng ý lịch sự:</b> I see your point, but … / That's true to some extent, however …</li>
+      <li><b>Kết luận:</b> To sum up, … / All in all, …</li></ul>
+      <div class="model">In my opinion, the most important quality of a manager is being decisive. This is because teams need clear direction, especially in a crisis. For example, in my company, our director made a quick decision to move online during the pandemic, which saved the business. On the other hand, a good manager should also be supportive and consult the team. To sum up, the best managers combine decisiveness with empathy. ${spk("In my opinion, the most important quality of a manager is being decisive.")}</div></section>`;
+  }
+
+  /* ---------- router ---------- */
+  function route(force) {
+    const h = (location.hash || "#home").slice(1); const parts = h.split("/");
+    let html = "", anchor = null;
+    if (parts[0] === "unit") { html = pageUnit(parts[1], parts[2]); anchor = parts[3]; }
+    else if (parts[0] === "vocab") html = pageVocab(parts[1], parts[2]);
+    else if (parts[0] === "exam") html = pageExam();
+    else if (parts[0] === "grammar") { html = pageGrammar(); anchor = parts[1]; }
+    else html = pageHome();
+    if (parts[0] !== "vocab" || parts[1] !== "cards") document.onkeydown = null;
+    main().innerHTML = html; setActiveNav("#" + h);
+    document.body.classList.remove("navopen");
+    if (anchor) { const a = document.getElementById(anchor); if (a) setTimeout(() => a.scrollIntoView({ behavior: "smooth", block: "start" }), 30); }
+    else if (!force || force === true) window.scrollTo(0, 0);
+    $$(".vtable").length && bindSearch();
+  }
+  function bindSearch() {
+    const s = $("#vsearch"); if (!s) return;
+    s.oninput = () => { const q = s.value.toLowerCase().trim(); $$(".vrow").forEach(r => r.style.display = !q || r.dataset.s.includes(q) ? "" : "none"); };
+  }
+
+  document.addEventListener("click", ev => {
+    const sp = ev.target.closest("[data-say]"); if (sp) { ev.preventDefault(); ev.stopPropagation(); speak(sp.dataset.say); return; }
+    const act = ev.target.closest("[data-act]"); if (act) {
+      const sec = act.closest("[data-ex]");
+      if (act.dataset.act === "check") gradeExercise(sec, false);
+      if (act.dataset.act === "show") gradeExercise(sec, true);
+      if (act.dataset.act === "reset") { $$("input[type=text]", sec).forEach(i => { i.value = ""; i.className = ""; }); $$("select", sec).forEach(s => s.value = ""); $$("input[type=radio]", sec).forEach(r => r.checked = false); $$(".row", sec).forEach(r => r.classList.remove("ok", "no")); $$(".opt", sec).forEach(o => o.classList.remove("right", "wrong")); $$(".fb", sec).forEach(f => f.innerHTML = ""); $(".score", sec).textContent = ""; }
+    }
+    if (ev.target.closest("#menuBtn")) document.body.classList.toggle("navopen");
+    const rb = ev.target.closest("#resetAll"); if (rb) { if (rb.dataset.armed) { P = { ex: {}, vocab: {}, exams: [] }; save(); route(); rb.textContent = "Xoá tiến độ"; delete rb.dataset.armed; } else { rb.dataset.armed = "1"; rb.textContent = "Bấm lần nữa để xoá hết tiến độ"; setTimeout(() => { if (rb.dataset.armed) { delete rb.dataset.armed; rb.textContent = "Xoá tiến độ"; } }, 4000); } }
+  });
+  document.addEventListener("keydown", ev => {
+    if (ev.key === "Enter" && ev.target.matches(".ex input[type=text]")) { const sec = ev.target.closest("[data-ex]"); const ins = $$("input[type=text]", sec); const i = ins.indexOf(ev.target); if (i < ins.length - 1) ins[i + 1].focus(); else gradeExercise(sec, false); }
+  });
+
+  /* ---------- nav ---------- */
+  $("#nav").innerHTML = `<a href="#home">🏠 Trang chủ</a><div class="navh">Units</div>` +
+    UNITS.map(u => `<a href="#unit/${u.id}">${u.id}. ${esc(u.title)}</a>`).join("") +
+    `<div class="navh">Ôn luyện</div><a href="#vocab">📇 Từ vựng</a><a href="#grammar">📐 Ngữ pháp & Kỹ năng</a><a href="#exam">📝 Luyện thi</a>
+     <div class="navfoot"><button id="resetAll" class="linkbtn">Xoá tiến độ</button></div>`;
+  window.addEventListener("hashchange", () => route());
+  try { speechSynthesis.getVoices(); } catch (e) {}
+  route();
+})();
+
+</script>
+
+</body>
+</html>
